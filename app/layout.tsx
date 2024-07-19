@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Serif, Courgette } from "next/font/google";
+import { IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 
-export const mountains = Courgette({
-  subsets: ["latin"],
-  weight: "400",
-});
 const inter = IBM_Plex_Serif({ subsets: ["latin"], weight: "500" });
 
 export const metadata: Metadata = {

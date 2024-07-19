@@ -1,8 +1,12 @@
 import { cn } from "@/lib/utils";
-import { mountains } from "./layout";
+import { Courgette } from "next/font/google";
 import { CountdownTimer } from "@/components/countdown-timer";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+
+const mountains = Courgette({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function Home() {
   const targetDate = "2024-12-07T19:00:00"; // Set your target date here
