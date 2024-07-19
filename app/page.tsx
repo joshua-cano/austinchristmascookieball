@@ -28,15 +28,9 @@ export default function Home() {
         <div className="text-center font-sans text-slate-700">
           <div className="px-2 pt-6 sm:p-10 sm:pb-4 max-w-[650px] mx-auto">
             <div className="font-bold space-y-2">
-              <h1 className={cn("text-3xl md:text-6xl", mountains.className)}>
-                1st Annual
+              <h1 className={cn("text-4xl md:text-6xl", mountains.className)}>
+                1st Annual Christmas Cookie Hoedown
               </h1>
-              <h2 className={cn("text-3xl md:text-6xl", mountains.className)}>
-                Christmas Cookie
-              </h2>
-              <h2 className={cn("text-3xl md:text-6xl", mountains.className)}>
-                Hoedown
-              </h2>
             </div>
             <p
               className={cn(
@@ -46,15 +40,15 @@ export default function Home() {
             >
               Mark&apos;s 60th Birthday Celebration
             </p>
-            <p className="text-lg sm:text-xl font-serif">
+            <p className="text-base sm:text-xl font-serif">
               Let&apos;s two-step, waltz and polka the night away at the
               Christmas event of the year!
             </p>
-            <p className="text-lg sm:text-xl font-serif">
+            <p className="text-base sm:text-xl font-serif">
               Bring your homemade Christmas cookies and share your favorite
               recipes. Festive attire is suggested.
             </p>
-            <div className="text-lg sm:text-xl mt-6 mb-6 font-serif">
+            <div className="text-base sm:text-xl mt-6 mb-6 font-serif">
               <p>December 7, 2024</p>
               <p>8pm to midnight</p>
               <p>Scottish Rite Theatre</p>
