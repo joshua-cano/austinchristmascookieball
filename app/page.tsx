@@ -1,90 +1,81 @@
-import { cn } from "@/lib/utils";
-import { Courgette } from "next/font/google";
-import { CountdownTimer } from "@/components/countdown-timer";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { Poppins } from "next/font/google";
 
-const mountains = Courgette({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export default function Home() {
-  const targetDate = "2024-12-07T19:00:00"; // Set your target date here
-
-  const sponsors = [
-    {
-      name: "Blue Bolt Home Services",
-      website: "https://bluebolthomeservices.com",
-    },
-    // Add more sponsors as needed
-  ];
-
   return (
     <>
-      <div
-        className="flex flex-col bg-[url('/hero-new.jpg')] bg-no-repeat bg-center
-       bg-cover min-h-screen bg-blend-overlay bg-stone-400"
-      >
-        <div className="text-center font-sans text-slate-700">
-          <div className="px-2 pt-6 sm:p-10 sm:pb-4 max-w-[650px] mx-auto">
-            <div className="font-bold space-y-2">
-              <h1 className={cn("text-4xl md:text-6xl", mountains.className)}>
-                1st Annual Christmas Cookie Hoedown
-              </h1>
-            </div>
-            <p
-              className={cn(
-                "text-xl sm:text-2xl mt-4 mb-6",
-                mountains.className
-              )}
-            >
-              Mark&apos;s 60th Birthday Celebration
+      <section className="flex flex-col h-[400px] md:h-[900px] w-auto relative pt-10">
+        <div className="text-center h-full flex flex-col justify-between z-40">
+          <div className="md:space-y-4 max-w-screen-lg mx-auto">
+            <p className="text-2xl md:mb-16 md:text-5xl font-bold text-[#AF5138]">
+              Save the date!
             </p>
-            <p className="text-base sm:text-xl font-serif">
-              Let&apos;s two-step, waltz and polka the night away at the
-              Christmas event of the year!
+            <h1 className="text-2xl md:text-7xl font-black italic text-[#8A3F2C]">
+              Merry Christmas Cookie Charity Ball
+            </h1>
+            <p className="text-xl md:text-5xl font-black italic text-[#D15130]">
+              Fundraiser
             </p>
-            <p className="text-base sm:text-xl font-serif">
-              Bring your homemade Christmas cookies and share your favorite
-              recipes. Festive attire is suggested.
-            </p>
-            <div className="text-base sm:text-xl mt-6 mb-6 font-serif">
-              <p>December 7, 2024</p>
-              <p>8pm to midnight</p>
-              <p>Scottish Rite Theatre</p>
-              <p className="text-amber-800">207 W 18th St., Austin, TX 78701</p>
-            </div>
-            <Button size="lg" className="mb-2 bg-slate-800">
-              RSVP
-            </Button>
           </div>
+
+          <p className="text-xl md:text-5xl font-black pb-4 md:pb-10 text-[#AF5138]">
+            Proceeds go to benefit New Hope Animal Rescue
+          </p>
         </div>
-        <CountdownTimer targetDate={targetDate} />
-      </div>
+        <img
+          src="herov2.png"
+          alt="band"
+          className="absolute top-0 left-0 h-full w-full object-cover"
+        />
+      </section>
 
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-2xl sm:text-4xl font-bold text-center mb-16 text-gray-800">
-            Sponsors and Donors
-          </h1>
-
-          <div className="grid grid-cols-1  gap-8">
-            {sponsors.map((sponsor, index) => (
-              <SponsorCard
-                key={index}
-                name={sponsor.name}
-                website={sponsor.website}
-              />
-            ))}
+      <section className="py-16 bg-[#FFF9EC]">
+        <div className="max-w-screen-lg mx-auto px-4 text-center space-y-8">
+          <h2 className="text-3xl sm:text-7xl font-black text-center text-[#8A3F2C]">
+            When & Where?
+          </h2>
+          <div
+            className={cn(
+              "text-xl sm:text-3xl sm:leading-10",
+              poppins.className
+            )}
+          >
+            <p>December 7, 2024</p>
+            <p>7pm to midnight</p>
+            <p>Scottish Rite Theatre</p>
+            <p>207 W 18th St., Austin, TX 78701</p>
           </div>
+
+          <Button variant="primary" size="xl" className="text-xl sm:text-3xl">
+            Ticket Information
+          </Button>
         </div>
       </section>
-      <section className="container mx-auto my-8 py-16">
-        <div className="flex flex-col md:flex-row items-center text-center sm:text-left">
+
+      <section className="max-w-screen-xl mx-auto my-8 py-16">
+        <div
+          className="flex flex-col md:flex-row items-center gap-16
+         text-center sm:text-left"
+        >
           <div className="md:w-1/2">
-            <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Musical guests: Jeff Hughes and Chaparral
+            <h2 className="text-3xl sm:text-7xl font-black text-[#8A3F2C] mb-8">
+              Musical Guests
             </h2>
+            <p className={cn("text-xl sm:text-3xl", poppins.className)}>
+              Join us as we celebrate the holidays and boot scoot to the music
+              of our favorite Austin band...
+            </p>
+            <p
+              className={cn("text-xl sm:text-3xl font-bold", poppins.className)}
+            >
+              Jeff Hughes and Chaparral
+            </p>
           </div>
           <div className="md:w-1/2">
             <img
@@ -95,44 +86,72 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="container py-16">
-        <div className="text-center mb-6">
-          <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Silent Auction
-          </h2>
-          <p className="text-lg text-gray-700">
-            All proceeds go to support our local dog and cat rescue
-            organization. Help us make a difference in the lives of our furry
-            friends!
-          </p>
+
+      <section className="max-w-screen-xl mx-auto py-16">
+        <div className="flex flex-col sm:flex-row gap-8">
+          <img
+            src="puppies.jpeg"
+            alt="puppies/kittens"
+            className="shadow-md h-[400px] md:h-[600px] aspect-[13/16] object-cover"
+          />
+          <div className={cn("space-y-8 px-4", poppins.className)}>
+            <p className="text-xl sm:text-3xl sm:leading-10">
+              Proceeds go to benefit{" "}
+              <span className="font-bold underline">
+                New Hope Animal Rescue.
+              </span>
+            </p>
+            <p className="text-xl sm:text-3xl sm:leading-10">
+              Here are some of the ways you can hlep raise funds for NHAR:
+            </p>
+            <ul className="list-disc pl-8 space-y-2 text-xl sm:text-3xl sm:leading-10">
+              <li>Bid on items at the Silent Auction the night of the event</li>
+              <li>Scan the QR Christmas tree ornaments in the lobby</li>
+              <li>
+                Make a donation above the ticket price when purchasing tickets
+                online
+              </li>
+            </ul>
+            <Button variant="primary" size="xl" className="text-xl sm:text-4xl">
+              Ticket Information
+            </Button>
+          </div>
         </div>
       </section>
+      <section className="py-10 px-4 max-w-screen-xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="space-y-4">
+            <h2 className="text-[#8A3F2C] font-black text-2xl md:text-6xl">
+              Other ways to help
+            </h2>
+            <Button variant="outline" size="xl">
+              Sorry I Can't Attend But Would Like To{" "}
+              <span className="font-bold">Make A Donation Anyway</span>
+            </Button>
+            <Button variant="outline" size="xl">
+              I Want To Donate A New / Unused{" "}
+              <span className="font-bold">Item For The Silent Auction</span>
+            </Button>
+          </div>
+          <img src="cartoonanimal.png" alt="" />
+        </div>
+      </section>
+      <footer
+        className="grid place-items-center"
+        style={{ gridTemplateAreas: "stack" }}
+      >
+        <img
+          src="footer.jpg"
+          alt="puppies/kittens"
+          style={{ gridArea: "stack" }}
+        />
+        <h2
+          className="text-lg max-w-48 md:text-3xl text-[#AF5138] font-extrabold md:max-w-xl text-center leading-snug"
+          style={{ gridArea: "stack" }}
+        >
+          Sponsored by Mark&apos;s 60th Birthday
+        </h2>
+      </footer>
     </>
   );
 }
-
-interface SponsorCardProps {
-  name: string;
-  website: string;
-}
-
-const SponsorCard: React.FC<SponsorCardProps> = ({ name, website }) => {
-  return (
-    <div className="flex flex-col items-center">
-      <img
-        src="/Blue-Bolt-Badge-Logo.png"
-        alt="Blue Bolt Home Services"
-        width={150}
-        height={150}
-      />
-      <a
-        href={website}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-2"
-      >
-        {website.slice(8)}
-      </a>
-    </div>
-  );
-};

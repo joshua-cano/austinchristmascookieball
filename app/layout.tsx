@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Serif } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const inter = IBM_Plex_Serif({ subsets: ["latin"], weight: "500" });
+const inter = Playfair_Display({ subsets: ["latin"], weight: "variable" });
 
 export const metadata: Metadata = {
   title: "Austin Christmas Cookie Ball",
