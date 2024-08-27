@@ -125,7 +125,7 @@ export default function Home() {
               Other ways to help
             </h2>
             <Button variant="outline" size="xl">
-              Sorry I Can't Attend But Would Like To{" "}
+              Sorry I Can&apos;t Attend But Would Like To{" "}
               <span className="font-bold">Make A Donation Anyway</span>
             </Button>
             <Button variant="outline" size="xl">
