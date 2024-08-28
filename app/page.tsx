@@ -27,7 +27,7 @@ export default function Home() {
             </p>
           </div>
 
-          <p className="text-xl lg:text-5xl font-black pb-4 lg:pb-10 text-[#AF5138]">
+          <p className="text-xl lg:text-5xl font-black pb-4 lg:pb-8 text-[#AF5138]">
             Proceeds go to benefit New Hope Animal Rescue
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function Home() {
       </section>
 
       <section className="max-w-screen-xl mx-auto py-16">
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
           <img
             src="puppies.jpeg"
             alt="puppies/kittens"
