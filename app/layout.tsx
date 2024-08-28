@@ -7,9 +7,6 @@ const inter = Playfair_Display({ subsets: ["latin"], weight: "variable" });
 export const metadata: Metadata = {
   title: "Austin Christmas Cookie Ball",
   description: "Austin Christmas Cookie Ball Celebration Birthday Event",
-  icons: {
-    icon: "/cartoonanimal.png",
-  },
 };
 
 export default function RootLayout({
