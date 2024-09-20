@@ -10,6 +10,7 @@ import cake from "../../public/cake.png";
 import gift from "../../public/gift.svg";
 import volunteer from "../../public/volunteer-activism.svg";
 import newHopeLogo from "../../public/newhope.png";
+import catDog from "../../public/cat-dog.png";
 
 export default function Home() {
   return (
@@ -66,7 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-default mx-auto max-w-screen-xl flex flex-col items-center">
+      <section className="px-default flex flex-col items-center">
         <Image
           className="lg:hidden -mt-16"
           src="/cookie.png"
@@ -84,17 +85,13 @@ export default function Home() {
             25% Off Bundles Available until October 31
           </p>
         </div>
-        <div className="py-8 lg:grid lg:grid-cols-2 lg:items-center lg:-mt-32 xl:-mt-48">
-          <Image
-            src="/cat-dog.png"
-            alt="cat and dog"
-            width={640}
-            height={640}
-          ></Image>
+        <div className="py-8 mx-auto max-w-screen-xl lg:grid lg:grid-cols-7 lg:items-center lg:-mt-32 xl:-mt-56">
+          <Image src={catDog} className="col-span-4" alt="cat and dog"></Image>
 
-          <div className="px-6 space-y-2 lg:bg-neutral lg:p-12 lg:rounded-[28px] lg;shadow-md lg:-ml-16 lg:mr-16">
+          <div className="px-6 space-y-2 lg:bg-neutral lg:p-12 lg:rounded-[28px] lg;shadow-md lg:-ml-20 col-span-3">
             <h2 className="font-bevan text-primary text-h2">
-              The Party of the Holiday Season!
+              The Party of
+              <span className="line-clamp-2">The Holiday Season</span>
             </h2>
             <div className="text-body space-y-4">
               <div>
@@ -117,11 +114,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-screen-xl md:grid md:grid-cols-5 md:items-center md:py-20">
+      <section className="pl-default mx-auto max-w-screen-xl md:grid md:grid-cols-5 md:items-center md:py-20">
         <Image src={band} alt="band" className="md:col-span-3 order-2" />
         <div className="px-[38px] py-8 space-y-default shadow-md rounded-lg md:col-span-2 md:-mr-20 md:bg-neutral md:order-1 md:z-50">
           <h2 className="font-bevan text-h2 text-secondary-blue">
-            Dance the Night Away
+            Dance the <span className="line-clamp-2">Night Away</span>
           </h2>
           <p className="text-2xl leading-normal">
             Celebrate the holidays and boot scootin&lsquo; to the music of
@@ -139,7 +136,7 @@ export default function Home() {
 
       <section className="px-4 pt-11 pb-10 lg:pb-40 bg-secondary-blue relative lg:max-w-screen-xl lg:mx-auto lg:rounded-2xl">
         <div className="mx-auto max-w-screen-xl">
-          <p className="font-heading text-h1 text-center text-secondary-goldstar mb-2">
+          <p className="font-heading lg:font-christmas text-h1 lg:text-callout text-center text-secondary-goldstar mb-2">
             Ways to Support
           </p>
           <p className="text-body text-center text-primary-snow">
@@ -148,7 +145,7 @@ export default function Home() {
           <Image
             src={newHopeLogo}
             alt="new hope animal rescue"
-            className="absolute top-8 right-8 hidden xl:block"
+            className="absolute top-12 right-8 hidden xl:block"
           />
 
           <div className="grid xl:hidden mt-20 lg:grid-cols-2 xl:grid-cols-4 place-items-center gap-20">
