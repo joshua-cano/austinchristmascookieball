@@ -9,6 +9,7 @@ import {
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import logo from "../../public/logo.png";
+import Link from "next/link";
 
 export const MobileNav = () => {
   return (
@@ -34,10 +35,10 @@ export const MobileNav = () => {
           </SheetHeader>
           <div className="flex flex-col items-end p-12 gap-5">
             <Button asChild variant="link" className="p-0">
-              <a href="/lineup">Lineup</a>
+              <Link href="/lineup">Lineup</Link>
             </Button>
             <Button asChild variant="link" className="p-0">
-              <a href="/volunteer">Volunteer</a>
+              <Link href="/volunteer">Volunteer</Link>
             </Button>
             <Button variant="secondary" className="w-[152px] justify-center">
               Donate

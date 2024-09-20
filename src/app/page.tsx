@@ -46,7 +46,7 @@ export default function Home() {
 
             <div className="hidden lg:block">
               <Button asChild className="w-full max-w-[300px]">
-                <a href="/volunteer" className="mt-8">
+                <a href="/" className="mt-8">
                   Get Your Tickets <Image src={whiteStar} alt="star" />
                 </a>
               </Button>
@@ -76,7 +76,7 @@ export default function Home() {
         />
         <div className="lg:hidden">
           <Button asChild className="w-full">
-            <a href="/volunteer" className="mt-8">
+            <a href="/" className="mt-8">
               Get Your Tickets <Image src={whiteStar} alt="star" />
             </a>
           </Button>
@@ -286,12 +286,12 @@ export default function Home() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-8">
           <Button asChild className="w-full max-w-[310px]">
-            <a href="/volunteer">
+            <a href="/">
               Donate Now! <Image src={volunteer} alt="volunteer" />
             </a>
           </Button>
           <Button variant="secondary" asChild className="w-full max-w-[310px]">
-            <a href="/volunteer">
+            <a href="/">
               Silent Auction Gift <Image src={gift} alt={gift} />
             </a>
           </Button>

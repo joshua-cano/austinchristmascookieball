@@ -20,7 +20,7 @@ const Volunteer = () => {
             </div>
 
             <Button asChild className="w-full max-w-[300px]">
-              <a href="/volunteer" className="mt-8">
+              <a href="/" className="mt-8">
                 Get Your Tickets <Image src={whiteStar} alt="star" />
               </a>
             </Button>
