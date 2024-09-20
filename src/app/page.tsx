@@ -14,9 +14,9 @@ import newHopeLogo from "../../public/newhope.png";
 export default function Home() {
   return (
     <>
-      <section className="px-default pb-32 pt-9 lg:pb-9 lg:py-24 bg-hero bg-neutral-background bg-center lg:h-[980px]">
-        <div className="mx-auto max-w-screen-xl lg:grid lg:grid-cols-3 lg:gap-5">
-          <div className="lg:col-span-2 space-y-4 ">
+      <section className="px-default pb-32 pt-9 lg:pb-9 lg:py-24 bg-hero bg-neutral-background bg-center lg:h-[900px]">
+        <div className="mx-auto max-w-screen-xl lg:grid lg:grid-cols-7 lg:gap-5">
+          <div className="lg:col-span-5 space-y-4 ">
             <div>
               <p className="font-bebas text-subheading text-secondary-evergreen">
                 Fundraiser
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
 
           <Image
-            className="hidden lg:block"
+            className="hidden lg:block lg:col-span-2"
             src="/cookie.png"
             alt="cookie"
             width={420}
@@ -84,7 +84,7 @@ export default function Home() {
             25% Off Bundles Available until October 31
           </p>
         </div>
-        <div className="py-8 lg:grid lg:grid-cols-2 lg:items-center lg:-mt-56">
+        <div className="py-8 lg:grid lg:grid-cols-2 lg:items-center lg:-mt-32 xl:-mt-48">
           <Image
             src="/cat-dog.png"
             alt="cat and dog"
