@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { useEffect, useState, useCallback } from "react";
+
+import React, { useEffect, useState, useCallback } from "react";
 
 interface TimeLeft {
   days: number;
@@ -29,6 +29,15 @@ TimerComponent.displayName = "TimerComponent";
 export const CountdownTimer: React.FC<CountdownTimerProps> = ({
   targetDate,
 }) => {
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  const [isMounted, setIsMounted] = useState(false);
+
   const calculateTimeLeft = useCallback((): TimeLeft => {
     const difference = +new Date(targetDate) - +new Date();
 
@@ -51,18 +60,38 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({
     return timeLeft;
   }, [targetDate]);
 
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
-
   useEffect(() => {
-    const timer = setInterval(() => {
+    setIsMounted(true); // Mark as mounted
+
+    // Only set the initial timeLeft if mounted
+    if (isMounted) {
       setTimeLeft(calculateTimeLeft());
-    }, 1000);
 
-    return () => clearInterval(timer);
-  }, [calculateTimeLeft]);
+      const timer = setInterval(() => {
+        setTimeLeft(calculateTimeLeft());
+      }, 1000);
 
-  // If timeLeft is null or not set yet, render a consistent placeholder
-  // However, since we initialize it with calculateTimeLeft, it's always set
+      return () => clearInterval(timer);
+    }
+  }, [calculateTimeLeft, isMounted]);
+
+  // If not mounted yet, render nothing or a placeholder
+  if (!isMounted) {
+    return null; // Or a loading spinner if preferred
+  }
+
+  // If timeLeft is all zeros, the event has started
+  const { days, hours, minutes, seconds } = timeLeft;
+  const hasTimeLeft = days || hours || minutes || seconds;
+
+  if (!hasTimeLeft) {
+    return (
+      <div className="flex flex-col items-center">
+        <h2 className="text-h2">Countdown</h2>
+        <p className="text-body">The event has started!</p>
+      </div>
+    );
+  }
 
   const timerComponents: JSX.Element[] = [];
 
