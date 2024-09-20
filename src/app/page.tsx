@@ -114,7 +114,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pl-default mx-auto max-w-screen-xl md:grid md:grid-cols-5 md:items-center md:py-20">
+      <section className="md:pl-default mx-auto max-w-screen-xl md:grid md:grid-cols-5 md:items-center md:py-20">
         <Image src={band} alt="band" className="md:col-span-3 order-2" />
         <div className="px-[38px] py-8 space-y-default shadow-md rounded-lg md:col-span-2 md:-mr-20 md:bg-neutral md:order-1 md:z-50">
           <h2 className="font-bevan text-h2 text-secondary-blue">
@@ -301,8 +301,12 @@ export default function Home() {
             Sponsored by
           </h2>
           <div className="flex flex-col md:flex-row items-center justify-evenly gap:8">
-            <Image src={blueBoltLogo} alt="Blue Bolt Home Services" />
-            <Image src={majorLogo} alt="Major Danger Studio" />
+            <a href="https://www.bluebolthomeservices.com" target="_blank">
+              <Image src={blueBoltLogo} alt="Blue Bolt Home Services" />
+            </a>
+            <a href="https://www.majordanger.com" target="_blank">
+              <Image src={majorLogo} alt="Major Danger Studio" />
+            </a>
             <Image src={cookiesLogo} alt="Cookies" />
           </div>
         </div>
