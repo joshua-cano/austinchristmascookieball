@@ -177,7 +177,7 @@ export default function Home() {
               <div className="space-y-3">
                 <h3 className="font-bevan text-h3 text-primary">Giving Tree</h3>
                 <p className="text-bodysm">
-                  Scan the Giving Tree QR code to donation.
+                  Scan the Giving Tree QR code to donate.
                 </p>
               </div>
             </div>
@@ -250,7 +250,7 @@ export default function Home() {
             <div className="space-y-3">
               <h3 className="font-bevan text-h3 text-primary">Giving Tree</h3>
               <p className="text-bodysm">
-                Scan the Giving Tree QR code to donation.
+                Scan the Giving Tree QR code to donate.
               </p>
             </div>
           </div>
