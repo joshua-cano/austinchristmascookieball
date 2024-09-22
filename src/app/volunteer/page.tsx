@@ -5,7 +5,7 @@ import { Icons } from "@/components/icons";
 
 const Volunteer = () => {
   return (
-    <>
+    <main>
       <section className="px-default pb-72 pt-9 lg:pb-9 lg:py-24 bg-hero bg-neutral-background bg-center lg:h-[900px]">
         <div className="mx-auto max-w-screen-xl">
           <div className="lg:col-span-2 space-y-4 ">
@@ -110,7 +110,7 @@ const Volunteer = () => {
           </div>
         </form>
       </section>
-    </>
+    </main>
   );
 };
 

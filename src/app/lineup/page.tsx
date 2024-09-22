@@ -6,7 +6,7 @@ const Lineup = () => {
   const targetDate = "2024-12-07T18:00:00";
 
   return (
-    <>
+    <main>
       <section className="px-default pb-72 pt-9 lg:pb-9 lg:py-24 bg-hero bg-neutral-background bg-center lg:h-[900px]">
         <div className="mx-auto max-w-screen-xl">
           <div className="lg:col-span-2 space-y-4 ">
@@ -69,9 +69,9 @@ const Lineup = () => {
 
       <section className="max-w-screen-xl mx-auto px-default py-20 space-y-5">
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-          <Icons.star className="text-secondary-goldstar" />
+          <Icons.star className="text-secondary-goldstar size-8" />
           <CountdownTimer targetDate={targetDate} />
-          <Icons.star className="text-secondary-goldstar" />
+          <Icons.star className="text-secondary-goldstar size-8" />
         </div>
         <h2 className="font-bevan text-h2 text-primary text-center">
           Until the Event
@@ -120,7 +120,7 @@ const Lineup = () => {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 };
 

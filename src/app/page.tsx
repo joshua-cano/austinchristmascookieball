@@ -12,10 +12,10 @@ import { Icons } from "@/components/icons";
 
 export default function Home() {
   return (
-    <>
-      <section className="px-default pb-32 pt-9 lg:pb-9 lg:py-24 bg-hero bg-neutral-background bg-center lg:h-[900px]">
+    <main>
+      <section className="px-default py-9 lg:py-24">
         <div className="mx-auto max-w-screen-xl lg:grid lg:grid-cols-7 lg:gap-5">
-          <div className="lg:col-span-5 space-y-4 ">
+          <div className="lg:col-span-5 space-y-4">
             <div>
               <p className="font-bebas text-subheading text-secondary-evergreen">
                 Fundraiser
@@ -70,31 +70,38 @@ export default function Home() {
             width={420}
             height={414}
           />
+
+          <div className="flex flex-col lg:hidden mt-8">
+            <Image
+              src="/cookie.png"
+              alt="cookie"
+              className="self-center"
+              width={420}
+              height={414}
+            />
+            <div>
+              <Button asChild className="w-full">
+                <a href="/" className="mt-8">
+                  Get Your Tickets <Icons.star className="size-5" />
+                </a>
+              </Button>
+              <p className="italic text-caption text-center">
+                25% Off Bundles Available until October 31
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="px-default flex flex-col items-center">
-        <Image
-          className="lg:hidden -mt-16"
-          src="/cookie.png"
-          alt="cookie"
-          width={420}
-          height={414}
-        />
-        <div className="lg:hidden">
-          <Button asChild className="w-full">
-            <a href="/" className="mt-8">
-              Get Your Tickets <Icons.star className="size-5" />
-            </a>
-          </Button>
-          <p className="italic text-caption text-center">
-            25% Off Bundles Available until October 31
-          </p>
-        </div>
-        <div className="py-8 mx-auto max-w-screen-xl lg:grid lg:grid-cols-7 lg:items-center lg:-mt-32 xl:-mt-56">
-          <Image src={catDog} className="col-span-4" alt="cat and dog"></Image>
+      <section className="lg:px-default flex flex-col items-center">
+        <div className="mx-auto max-w-screen-xl lg:grid lg:grid-cols-7 lg:items-center">
+          <Image
+            src={catDog}
+            className="col-span-4 px-default lg:px-0"
+            alt="cat and dog"
+          ></Image>
 
-          <div className="px-6 space-y-2 lg:bg-neutral lg:p-12 lg:rounded-[28px] lg;shadow-md lg:-ml-20 col-span-3">
+          <div className="bg-neutral px-10 space-y-2 p-12 lg:rounded-[28px] lg:shadow-md lg:-ml-20 col-span-3 -mt-12 lg:m-0">
             <h2 className="font-bevan text-primary text-h2">
               The Party of
               <span className="line-clamp-2">The Holiday Season</span>
@@ -120,9 +127,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="md:pl-default mx-auto max-w-screen-xl md:grid md:grid-cols-5 md:items-center md:py-20">
+      <section className="md:pl-default mx-auto max-w-screen-xl md:grid md:grid-cols-5 md:items-center md:py-20 bg-neutral lg:bg-inherit">
         <Image src={band} alt="band" className="md:col-span-3 order-2" />
-        <div className="px-[38px] py-8 space-y-default shadow-md rounded-lg md:col-span-2 md:-mr-20 md:bg-neutral md:order-1 md:z-50">
+        <div className="px-[38px] py-8 space-y-default shadow-md rounded-lg md:col-span-2 md:-mr-20 md:bg-neutral md:order-1 md:z-10">
           <h2 className="font-bevan text-h2 text-secondary-blue">
             Dance the <span className="line-clamp-2">Night Away</span>
           </h2>
@@ -317,6 +324,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

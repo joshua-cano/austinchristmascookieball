@@ -44,9 +44,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${raleway.variable} ${berkshireSwash.variable} ${bebasNeue.variable}  ${bevan.variable} ${christmas.variable} antialiased`}
+      className={`${raleway.variable} ${berkshireSwash.variable} ${bebasNeue.variable} ${bevan.variable} ${christmas.variable} antialiased`}
     >
-      <body className="text-primary-solstice">
+      <body className="text-primary-solstice bg-hero bg-no-repeat bg-cover bg-fixed bg-neutral-background">
         <Header />
         {children}
         <Footer />
