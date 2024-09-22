@@ -7,11 +7,11 @@ const Lineup = () => {
 
   return (
     <main>
-      <section className="px-default pb-72 pt-9 lg:pb-9 lg:py-24 bg-hero bg-neutral-background bg-center lg:h-[900px]">
+      <section className="px-default py-9 lg:py-24">
         <div className="mx-auto max-w-screen-xl">
-          <div className="lg:col-span-2 space-y-4 ">
+          <div className="space-y-4">
             <div>
-              <p className="font-bebas text-subheading text-secondary-evergreen">
+              <p className="font-bebas text-subheading text-secondary-everceen">
                 Fundraiser
               </p>
               <h1 className="text-h1 font-heading text-primary">
@@ -31,7 +31,7 @@ const Lineup = () => {
         </div>
       </section>
 
-      <section className="max-w-screen-xl mx-auto px-default -mt-56 lg:-mt-[26rem]">
+      <section className="max-w-screen-xl mx-auto px-default">
         <h2 className="text-h2 font-bevan text-center mb-10">
           Schedule of Events
         </h2>
