@@ -28,7 +28,11 @@ export default function Home() {
             <p className="text-body">
               Boot Scoot into the holiday season with cookies, live music,
               dancing, and fundraising for our furry friends at{" "}
-              <a href="nhanimalrescue.org" className="font-bold underline">
+              <a
+                target="_blank"
+                href="https://www.nhanimalrescue.org"
+                className="font-bold underline"
+              >
                 New Hope Animal Rescue
               </a>
             </p>

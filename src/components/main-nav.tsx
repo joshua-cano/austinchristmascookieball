@@ -10,8 +10,12 @@ export function MainNav() {
         <Image src={logo} width={210} alt="Logo" />
       </Link>
       <nav className="flex items-center gap-8 text-body font-semibold">
-        <Link href="/lineup">Lineup</Link>
-        <Link href="/volunteer">Volunteer</Link>
+        <Link className="hover:underline underline-offset-8" href="/lineup">
+          Lineup
+        </Link>
+        <Link className="hover:underline underline-offset-8" href="/volunteer">
+          Volunteer
+        </Link>
         <Button
           asChild
           variant="secondary"

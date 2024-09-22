@@ -20,11 +20,24 @@ export const Footer = () => {
           <p className="text-h3 font-bevan mb-default">Menu</p>
 
           <div className="text-body flex flex-col gap-1">
-            <Link href="/">Home</Link>
-            <Link href="/lineup">Lineup</Link>
-            <Link href="/volunteer">Volunteer</Link>
-            <a href="/">Donate</a>
-            <a href="/">Silent Auction</a>
+            <Link className="hover:underline underline-offset-8" href="/">
+              Home
+            </Link>
+            <Link className="hover:underline underline-offset-8" href="/lineup">
+              Lineup
+            </Link>
+            <Link
+              className="hover:underline underline-offset-8"
+              href="/volunteer"
+            >
+              Volunteer
+            </Link>
+            <a className="hover:underline underline-offset-8" href="/">
+              Donate
+            </a>
+            <a className="hover:underline underline-offset-8" href="/">
+              Silent Auction
+            </a>
           </div>
         </div>
       </div>
@@ -34,7 +47,13 @@ export const Footer = () => {
 
         <div className="md:flex md:gap-1.5">
           <p className="text-body mt-7 md:m-0">Designed by</p>
-          <p className="text-body font-bold">Major Danger Studio</p>
+          <a
+            href="https://www.majordanger.com"
+            target="_blank"
+            className="text-body font-bold hover:underline hover:underline-offset-8"
+          >
+            Major Danger Studio
+          </a>
         </div>
       </div>
     </footer>
