@@ -1,16 +1,14 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import whiteStar from "../../public/white-star.svg";
 import bow from "../../public/bow.png";
 import band from "../../public/band.png";
 import blueBoltLogo from "../../public/blue-bolt-logo.png";
 import majorLogo from "../../public/major-danger-studio-logo.png";
 import cookiesLogo from "../../public/cookies-logo.png";
 import cake from "../../public/cake.png";
-import gift from "../../public/gift.svg";
-import volunteer from "../../public/volunteer-activism.svg";
 import newHopeLogo from "../../public/newhope.png";
 import catDog from "../../public/cat-dog.png";
+import { Icons } from "@/components/icons";
 
 export default function Home() {
   return (
@@ -46,9 +44,13 @@ export default function Home() {
             </div>
 
             <div className="hidden lg:block">
-              <Button asChild className="w-full max-w-[300px]">
+              <Button
+                asChild
+                className="w-full max-w-[300px]
+              "
+              >
                 <a href="/" className="mt-8">
-                  Get Your Tickets <Image src={whiteStar} alt="star" />
+                  Get Your Tickets <Icons.star className="size-5" />
                 </a>
               </Button>
               <p className="italic text-caption">
@@ -78,7 +80,7 @@ export default function Home() {
         <div className="lg:hidden">
           <Button asChild className="w-full">
             <a href="/" className="mt-8">
-              Get Your Tickets <Image src={whiteStar} alt="star" />
+              Get Your Tickets <Icons.star className="size-5" />
             </a>
           </Button>
           <p className="italic text-caption text-center">
@@ -282,14 +284,14 @@ export default function Home() {
           Can&rsquo;t Wait &lsquo;Til Christmas?
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-8">
-          <Button asChild className="w-full max-w-[310px]">
-            <a href="/">
-              Donate Now! <Image src={volunteer} alt="volunteer" />
-            </a>
-          </Button>
           <Button variant="secondary" asChild className="w-full max-w-[310px]">
             <a href="/">
-              Silent Auction Gift <Image src={gift} alt={gift} />
+              Donate Now! <Icons.donate />
+            </a>
+          </Button>
+          <Button asChild className="w-full max-w-[310px]">
+            <a href="/">
+              Silent Auction Gift <Icons.gift />
             </a>
           </Button>
         </div>

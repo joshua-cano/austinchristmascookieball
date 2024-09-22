@@ -10,14 +10,14 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-secondary-goldstar text-primary-snow justify-between hover:bg-secondary-goldstar/90",
+          "bg-secondary-goldstar text-primary-snow justify-between hover:bg-primary-snow hover:border-2 hover:border-secondary-goldstar hover:text-secondary-goldstar",
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:
-          "bg-secondary-green text-primary-snow justify-between hover:bg-secondary-green/90",
+          "bg-secondary-green text-primary-snow justify-between hover:bg-primary-snow hover:border-2 hover:border-secondary-green hover:text-secondary-green",
         ghost: "hover:bg-primary-solstice hover:text-primary-solstice",
         link: "text-primary-solstice underline-offset-4 hover:underline",
-        blue: "bg-secondary-blue text-primary-snow justify-center hover:bg-secondary-blue/90",
+        blue: "bg-secondary-blue text-primary-snow justify-center hover:bg-primary-snow hover:border-2 hover:border-secondary-blue hover:text-secondary-blue",
       },
       size: {
         default: "h-[60px] px-4 py-2",

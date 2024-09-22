@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import star from "../../../public/kid-star.svg";
-import whiteStar from "../../../public/white-star.svg";
 import { CountdownTimer } from "@/components/countdown-timer";
+import { Icons } from "@/components/icons";
 
 const Lineup = () => {
   const targetDate = "2024-12-07T18:00:00";
@@ -23,7 +22,7 @@ const Lineup = () => {
 
             <Button asChild className="w-full max-w-[300px]">
               <a href="/" className="mt-8">
-                Get Your Tickets <Image src={whiteStar} alt="star" />
+                Get Your Tickets <Icons.star />
               </a>
             </Button>
             <p className="italic text-caption">
@@ -71,9 +70,9 @@ const Lineup = () => {
 
       <section className="max-w-screen-xl mx-auto px-default py-20 space-y-5">
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-          <Image src={star} alt="star" />
+          <Icons.star className="text-secondary-goldstar" />
           <CountdownTimer targetDate={targetDate} />
-          <Image src={star} alt="star" />
+          <Icons.star className="text-secondary-goldstar" />
         </div>
         <h2 className="font-bevan text-h2 text-primary text-center">
           Until the Event

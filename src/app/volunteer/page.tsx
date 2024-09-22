@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import whiteStar from "../../../public/white-star.svg";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Icons } from "@/components/icons";
 
 const Volunteer = () => {
   return (
@@ -21,7 +20,7 @@ const Volunteer = () => {
 
             <Button asChild className="w-full max-w-[300px]">
               <a href="/" className="mt-8">
-                Get Your Tickets <Image src={whiteStar} alt="star" />
+                Get Your Tickets <Icons.star />
               </a>
             </Button>
             <p className="italic text-caption">
@@ -59,7 +58,7 @@ const Volunteer = () => {
             <Button
               variant="blue"
               type="submit"
-              className="mt-8 h-[50] w-[150px]"
+              className="mt-8 h-[50px] w-[150px]"
             >
               Submit
             </Button>
@@ -104,7 +103,7 @@ const Volunteer = () => {
             <Button
               variant="blue"
               type="submit"
-              className="mt-8 h-[50] w-[150px]"
+              className="mt-8 h-[50px] w-[150px]"
             >
               Submit
             </Button>
