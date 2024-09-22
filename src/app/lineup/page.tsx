@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { CountdownTimer } from "@/components/countdown-timer";
 import { Icons } from "@/components/icons";
 

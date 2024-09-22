@@ -15,7 +15,7 @@ export function MainNav() {
         <Button
           asChild
           variant="secondary"
-          className="h-[50px] w-[150px] justify-center"
+          className="h-[50px] w-[150px] justify-center hover:border-secondary-evergreen hover:text-secondary-evergreen"
         >
           <a href="/">Donate</a>
         </Button>
