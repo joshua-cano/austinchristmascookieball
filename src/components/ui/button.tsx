@@ -16,7 +16,7 @@ const buttonVariants = cva(
         secondary:
           "bg-secondary-green text-primary-snow justify-between hover:bg-primary-snow hover:border-2 hover:border-secondary-green hover:text-secondary-green",
         ghost: "hover:bg-primary-solstice hover:text-primary-solstice",
-        link: "text-primary-solstice underline-offset-4 hover:underline",
+        link: "text-primary-solstice underline-offset-8 hover:underline p-0 m-0",
         blue: "bg-secondary-blue text-primary-snow justify-center hover:bg-primary-snow hover:border-2 hover:border-secondary-blue hover:text-secondary-blue",
       },
       size: {
