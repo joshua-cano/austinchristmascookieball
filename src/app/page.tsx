@@ -222,7 +222,7 @@ export default function Home() {
 
       <section className="mx-auto max-w-screen-xl text-center px-10 pt-8 pb-20">
         <div className="hidden xl:grid xl:grid-cols-4 place-items-center gap-20 -mt-28 mb-16">
-          <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative">
+          <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative shadow-md">
             <Image
               className="absolute -top-8 left-0 scale-150"
               src={bow}
@@ -238,7 +238,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative">
+          <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative shadow-md">
             <Image
               className="absolute -top-8 left-0 scale-150"
               src={bow}
@@ -252,7 +252,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative">
+          <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative shadow-md">
             <Image
               className="absolute -top-8 left-0 scale-150"
               src={bow}
@@ -264,7 +264,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative">
+          <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative shadow-md">
             <Image
               className="absolute -top-8 left-0 scale-150"
               src={bow}
