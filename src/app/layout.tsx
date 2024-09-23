@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { Raleway } from "next/font/google";
 
 const berkshireSwash = localFont({
   src: "./fonts/BerkshireSwash-Regular.ttf",
@@ -20,8 +21,14 @@ const bevan = localFont({
   weight: "400 900",
 });
 
-const raleway = localFont({
-  src: "./fonts/Raleway.ttf",
+// const raleway = localFont({
+//   src: "./fonts/Raleway.ttf",
+//   variable: "--font-raleway",
+//   weight: "100 200 300 400 500 600 700 900",
+// });
+
+const raleway = Raleway({
+  subsets: ["latin"],
   variable: "--font-raleway",
 });
 
