@@ -55,7 +55,7 @@ export const MobileNav = () => {
             </Button>
             <Button
               variant="secondary"
-              className="h-[50px] w-[152px] justify-center hover:border-secondary-evergreen hover:text-secondary-evergreen"
+              className="h-[50px] w-[152px] justify-center hover:border-secondary-evergreen hover:text-secondary-evergreen focus-visible:ring-0"
             >
               Donate
             </Button>
