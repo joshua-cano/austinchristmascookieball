@@ -69,8 +69,8 @@ const Lineup = () => {
         </div>
       </section>
 
-      <section className="max-w-screen-xl mx-auto px-default py-20 space-y-default">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+      <section className="max-w-screen-xl mx-auto px-default py-[60px]">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-8 pb-default">
           <Icons.star className="text-secondary-goldstar size-8" />
           <CountdownTimer targetDate={targetDate} />
           <Icons.star className="text-secondary-goldstar size-8" />
