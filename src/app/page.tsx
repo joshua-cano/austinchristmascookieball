@@ -6,7 +6,6 @@ import blueBoltLogo from "../../public/blue-bolt-logo.png";
 import majorLogo from "../../public/major-danger-studio-logo.png";
 import cookiesLogo from "../../public/cookies-logo.png";
 import cookie from "../../public/cookie.png";
-import cake from "../../public/cake.png";
 import newHopeLogo from "../../public/newhope.png";
 import catDog from "../../public/cat-dog.png";
 import { Icons } from "@/components/icons";
@@ -37,14 +36,16 @@ export default function Home() {
                 New Hope Animal Rescue
               </a>
             </p>
-            <div className="flex items-start gap-2">
-              <p className="font-christmas font-bold text-calloutsm text-secondary">
+            <div className="flex items-start sm:items-center gap-2">
+              <p className="font-christmas font-bold text-calloutsm text-secondary sm:order-2">
                 Hosted by Mark Edwards in celebration of his 60th Birthday
               </p>
               <Image
-                src={cake}
+                src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f382/512.webp"
+                width={50}
+                height={50}
                 alt="cake"
-                className="sm:hidden flex-shrink-0"
+                className="sm:order-1 flex-shrink-0"
               />
             </div>
 
@@ -108,9 +109,13 @@ export default function Home() {
               <div>
                 <p className="font-bold">
                   Scottish Rite Theater{" "}
-                  <span className="text-bodyxs underline font-normal underline-offset-2 ml-2">
+                  <a
+                    href="https://www.google.com/maps/place/Austin+Scottish+Rite+Theater/@30.2862466,-97.7452655,16z/data=!4m6!3m5!1s0x8644b59e3ea94b9d:0x5d0413613afefd66!8m2!3d30.2799773!4d-97.7406312!16s%2Fm%2F0k2kbrv?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    className="text-bodyxs underline font-normal underline-offset-2 ml-2"
+                  >
                     map
-                  </span>
+                  </a>
                 </p>
                 <p>207 W 18th Street</p>
                 <p>Austin, TX 78701</p>

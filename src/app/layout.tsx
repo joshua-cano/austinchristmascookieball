@@ -21,12 +21,6 @@ const bevan = localFont({
   weight: "400 900",
 });
 
-// const raleway = localFont({
-//   src: "./fonts/Raleway.ttf",
-//   variable: "--font-raleway",
-//   weight: "100 200 300 400 500 600 700 900",
-// });
-
 const raleway = Raleway({
   subsets: ["latin"],
   variable: "--font-raleway",
@@ -53,10 +47,16 @@ export default function RootLayout({
       lang="en"
       className={`${raleway.variable} ${berkshireSwash.variable} ${bebasNeue.variable} ${bevan.variable} ${christmas.variable} antialiased`}
     >
-      <body className="text-primary-solstice bg-hero bg-no-repeat bg-cover bg-fixed bg-neutral-background">
-        <Header />
-        {children}
-        <Footer />
+      <body className="text-primary-solstice">
+        <div
+          className="fixed h-screen w-screen bg-hero bg-neutral-background bg-no-repeat bg-cover
+          -z-10"
+        ></div>
+        <div className="relative z-10">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

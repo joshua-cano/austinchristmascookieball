@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="p-8 md:pt-20 max-w-screen-xl mx-auto">
+    <footer className="px-8 pt-[46px] pb-8 md:pt-20 max-w-screen-xl mx-auto">
       <div className="md:grid md:grid-cols-2 md:gap-8">
         <div>
           <Image src={logo} alt="logo" width={270} className="mb-5" />

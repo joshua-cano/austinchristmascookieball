@@ -11,6 +11,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        custom: "inset 0px -6px 2px 0px hsla(var(--primary-solstice) / 0.1)",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
