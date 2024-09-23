@@ -6,7 +6,7 @@ export const twMerge = extendTailwindMerge({
   // use the `extend` key in case you want to extend instead of override
   override: {
     classGroups: {
-      "font-size": ["text-button"],
+      "font-size": ["text-button", "text-body"],
     },
   },
 });
