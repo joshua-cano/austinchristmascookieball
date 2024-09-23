@@ -46,10 +46,12 @@ const Volunteer = () => {
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof donationFormSchema>) {
     sendDonation(values);
+    donationForm.reset();
   }
 
   function onVolunteerSubmit(values: z.infer<typeof volunteerFormSchema>) {
     sendVolunteer(values);
+    volunteerForm.reset();
   }
 
   return (
