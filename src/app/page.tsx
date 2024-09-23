@@ -5,6 +5,7 @@ import band from "../../public/band.png";
 import blueBoltLogo from "../../public/blue-bolt-logo.png";
 import majorLogo from "../../public/major-danger-studio-logo.png";
 import cookiesLogo from "../../public/cookies-logo.png";
+import cookie from "../../public/cookie.png";
 import cake from "../../public/cake.png";
 import newHopeLogo from "../../public/newhope.png";
 import catDog from "../../public/cat-dog.png";
@@ -65,20 +66,12 @@ export default function Home() {
 
           <Image
             className="hidden lg:block lg:col-span-2"
-            src="/cookie.png"
+            src={cookie}
             alt="cookie"
-            width={420}
-            height={414}
           />
 
           <div className="flex flex-col lg:hidden mt-8">
-            <Image
-              src="/cookie.png"
-              alt="cookie"
-              className="self-center"
-              width={420}
-              height={414}
-            />
+            <Image src={cookie} alt="cookie" className="self-center" />
             <div>
               <Button asChild className="w-full">
                 <a href="/" className="mt-8">
