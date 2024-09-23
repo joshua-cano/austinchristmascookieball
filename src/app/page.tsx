@@ -48,7 +48,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="hidden lg:block">
+            <div className="hidden lg:block space-y-3">
               <Button
                 asChild
                 className="w-full max-w-[300px]
@@ -72,7 +72,7 @@ export default function Home() {
 
           <div className="flex flex-col lg:hidden mt-8">
             <Image src={cookie} alt="cookie" className="self-center" />
-            <div>
+            <div className="space-y-3">
               <Button asChild className="w-full">
                 <a href="/" className="mt-8">
                   Get Your Tickets <Icons.star className="size-5" />

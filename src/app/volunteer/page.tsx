@@ -57,7 +57,7 @@ const Volunteer = () => {
     <main>
       <section className="px-default py-9 lg:py-24">
         <div className="mx-auto max-w-screen-xl">
-          <div className="lg:col-span-2 space-y-4 ">
+          <div className="lg:col-span-2 space-y-6">
             <div>
               <p className="font-bebas text-subheading text-secondary-evergreen">
                 Fundraiser
@@ -67,14 +67,16 @@ const Volunteer = () => {
               </h1>
             </div>
 
-            <Button asChild className="w-full max-w-[300px]">
-              <a href="/" className="mt-8">
-                Get Your Tickets <Icons.star />
-              </a>
-            </Button>
-            <p className="italic text-caption">
-              25% Off Bundles Available until October 31
-            </p>
+            <div className="space-y-3">
+              <Button asChild className="w-full max-w-[300px]">
+                <a href="/">
+                  Get Your Tickets <Icons.star />
+                </a>
+              </Button>
+              <p className="italic text-caption">
+                25% Off Bundles Available until October 31
+              </p>
+            </div>
           </div>
         </div>
       </section>
