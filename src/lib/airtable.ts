@@ -12,10 +12,10 @@ export const sendVolunteer = async (
     process.env.AIRTABLE_BASEID!
   );
 
-  base("Volunteer Form").create(
+  base("tblVbkbWZ8wrgtfsv").create(
     {
       Name: formData.name,
-      "Volunteer Role": formData.volunteer,
+      Role: formData.volunteer,
       Phone: formData.phone,
       Email: formData.email,
     },
@@ -37,7 +37,7 @@ export const sendDonation = async (
     process.env.AIRTABLE_BASEID!
   );
 
-  base("Donation Form").create(
+  base("tblvfAofraaj0Vdw8").create(
     {
       Name: formData.name,
       Donation: formData.donation,
