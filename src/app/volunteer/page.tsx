@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Icons } from "@/components/icons";
 import { donationFormSchema, volunteerFormSchema } from "@/lib/schemas";
-import { sendDonation, sendVolunteer } from "@/lib/email";
+import { sendVolunteer, sendDonation } from "@/lib/airtable";
 
 import {
   Form,
@@ -35,15 +35,15 @@ const Volunteer = () => {
     defaultValues: {
       name: "",
       donation: "",
-      price: undefined,
-      bid: undefined,
+      price: "",
+      bid: "",
       phone: "",
       email: "",
     },
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof donationFormSchema>) {
+  function onDonationSubmit(values: z.infer<typeof donationFormSchema>) {
     sendDonation(values);
     donationForm.reset();
   }
@@ -185,7 +185,7 @@ const Volunteer = () => {
         </h2>
         <Form {...donationForm}>
           <form
-            onSubmit={donationForm.handleSubmit(onSubmit)}
+            onSubmit={donationForm.handleSubmit(onDonationSubmit)}
             className="space-y-8 bg-neutral-forms px-default py-8 md:p-12 rounded-lg shadow-md"
           >
             <div className="grid md:grid-cols-2 gap-6">
