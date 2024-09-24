@@ -4,6 +4,7 @@ import { z } from "zod";
 import { donationFormSchema, volunteerFormSchema } from "./schemas";
 import Airtable from "airtable";
 
+// Volunteer
 export const sendVolunteer = async (
   formData: z.infer<typeof volunteerFormSchema>
 ) => {
@@ -28,6 +29,7 @@ export const sendVolunteer = async (
   );
 };
 
+// Donation
 export const sendDonation = async (
   formData: z.infer<typeof donationFormSchema>
 ) => {
