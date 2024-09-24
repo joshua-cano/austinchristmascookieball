@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Raleway } from "next/font/google";
+import { Toaster } from "@/components/ui/toaster";
 
 const berkshireSwash = localFont({
   src: "./fonts/BerkshireSwash-Regular.ttf",
@@ -57,6 +58,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <Toaster />
       </body>
     </html>
   );

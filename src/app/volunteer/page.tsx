@@ -19,7 +19,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
+import { useToast } from "@/hooks/use-toast";
+
 const Volunteer = () => {
+  const { toast } = useToast();
   const volunteerForm = useForm<z.infer<typeof volunteerFormSchema>>({
     resolver: zodResolver(volunteerFormSchema),
     defaultValues: {
@@ -45,11 +48,17 @@ const Volunteer = () => {
   // 2. Define a submit handler.
   function onDonationSubmit(values: z.infer<typeof donationFormSchema>) {
     sendDonation(values);
+    toast({
+      title: "Form has been submitted",
+    });
     donationForm.reset();
   }
 
   function onVolunteerSubmit(values: z.infer<typeof volunteerFormSchema>) {
     sendVolunteer(values);
+    toast({
+      title: "Form has been submitted",
+    });
     volunteerForm.reset();
   }
 
