@@ -21,7 +21,7 @@ import {
 
 import { useToast } from "@/hooks/use-toast";
 
-const Lineup = () => {
+const SilentAuction = () => {
   const { toast } = useToast();
 
   const donationForm = useForm<z.infer<typeof donationFormSchema>>({
@@ -224,4 +224,4 @@ const Lineup = () => {
   );
 };
 
-export default Lineup;
+export default SilentAuction;

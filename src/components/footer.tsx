@@ -23,8 +23,11 @@ export const Footer = () => {
             <Link className="hover:underline underline-offset-8" href="/">
               Home
             </Link>
-            <Link className="hover:underline underline-offset-8" href="/lineup">
-              Lineup
+            <Link
+              className="hover:underline underline-offset-8"
+              href="/silent-auction"
+            >
+              Silent Auction
             </Link>
             <Link
               className="hover:underline underline-offset-8"
@@ -34,9 +37,6 @@ export const Footer = () => {
             </Link>
             <a className="hover:underline underline-offset-8" href="/">
               Donate
-            </a>
-            <a className="hover:underline underline-offset-8" href="/">
-              Silent Auction
             </a>
           </div>
         </div>
