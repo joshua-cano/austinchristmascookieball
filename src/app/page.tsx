@@ -54,7 +54,11 @@ export default function Home() {
 
             <div className="hidden lg:block">
               <Button asChild className="w-full max-w-[300px]">
-                <a href="/" className="mt-8">
+                <a
+                  href="https://austinchristmascookieball2024.account.webconnex.com"
+                  target="_blank"
+                  className="mt-8"
+                >
                   Get Your Tickets <Icons.star className="size-5" />
                 </a>
               </Button>
@@ -70,7 +74,11 @@ export default function Home() {
           <div className="flex flex-col lg:hidden mt-8">
             <Image src={cookie} alt="cookie" className="self-center" />
             <Button asChild className="w-full">
-              <a href="/" className="mt-8">
+              <a
+                href="https://austinchristmascookieball2024.account.webconnex.com"
+                target="_blank"
+                className="mt-8"
+              >
                 Get Your Tickets <Icons.star className="size-5" />
               </a>
             </Button>

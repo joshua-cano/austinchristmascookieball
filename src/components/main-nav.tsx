@@ -45,7 +45,12 @@ export function MainNav() {
           <Link href="/donate">Donate</Link>
         </Button>
         <Button asChild className="h-[50px] w-[150px] justify-center">
-          <a href="/">Tickets</a>
+          <a
+            href="https://austinchristmascookieball2024.account.webconnex.com"
+            target="_blank"
+          >
+            Tickets
+          </a>
         </Button>
       </nav>
     </div>

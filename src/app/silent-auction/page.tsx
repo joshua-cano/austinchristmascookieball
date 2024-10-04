@@ -59,7 +59,10 @@ const SilentAuction = () => {
             </div>
 
             <Button asChild className="w-full max-w-[300px]">
-              <a href="/">
+              <a
+                href="https://austinchristmascookieball2024.account.webconnex.com"
+                target="_blank"
+              >
                 Get Your Tickets <Icons.star />
               </a>
             </Button>

@@ -62,7 +62,13 @@ export const MobileNav = () => {
               </MobileLink>
             </Button>
             <Button className="h-[50px] w-[152px] justify-center">
-              Tickets
+              <a
+                href="https://austinchristmascookieball2024.account.webconnex.com"
+                target="_blank"
+                onClick={() => setOpen(false)}
+              >
+                Tickets
+              </a>
             </Button>
           </div>
         </SheetContent>
