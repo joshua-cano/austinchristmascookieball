@@ -18,7 +18,7 @@ const Volunteer = () => {
 
             <Button asChild className="w-full max-w-[300px]">
               <a
-                href="https://austinchristmascookieball2024.account.webconnex.com"
+                href="https://austinchristmascookieball2024.ticketspice.com/austin-christmas-cookie-boot-scootin-ball"
                 target="_blank"
               >
                 Get Your Tickets <Icons.star />

@@ -63,7 +63,7 @@ export const MobileNav = () => {
             </Button>
             <Button className="h-[50px] w-[152px] justify-center">
               <a
-                href="https://austinchristmascookieball2024.account.webconnex.com"
+                href="https://austinchristmascookieball2024.ticketspice.com/austin-christmas-cookie-boot-scootin-ball"
                 target="_blank"
                 onClick={() => setOpen(false)}
               >

@@ -55,7 +55,7 @@ export default function Home() {
             <div className="hidden lg:block">
               <Button asChild className="w-full max-w-[300px]">
                 <a
-                  href="https://austinchristmascookieball2024.account.webconnex.com"
+                  href="https://austinchristmascookieball2024.ticketspice.com/austin-christmas-cookie-boot-scootin-ball"
                   target="_blank"
                   className="mt-8"
                 >
@@ -75,7 +75,7 @@ export default function Home() {
             <Image src={cookie} alt="cookie" className="self-center" />
             <Button asChild className="w-full">
               <a
-                href="https://austinchristmascookieball2024.account.webconnex.com"
+                href="https://austinchristmascookieball2024.ticketspice.com/austin-christmas-cookie-boot-scootin-ball"
                 target="_blank"
                 className="mt-8"
               >
