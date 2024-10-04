@@ -44,8 +44,8 @@ export const MobileNav = () => {
           </SheetHeader>
           <div className="flex flex-col items-end p-12 gap-5">
             <Button asChild variant="link" className="h-auto p-0">
-              <MobileLink href="/lineup" onOpenChange={setOpen}>
-                Lineup
+              <MobileLink href="/silent-auction" onOpenChange={setOpen}>
+                Silent Auction
               </MobileLink>
             </Button>
             <Button asChild variant="link" className="h-auto p-0">
@@ -57,7 +57,9 @@ export const MobileNav = () => {
               variant="secondary"
               className="h-[50px] w-[152px] justify-center hover:border-secondary-evergreen hover:text-secondary-evergreen focus-visible:ring-0"
             >
-              Donate
+              <MobileLink href="/donate" onOpenChange={setOpen}>
+                Donate
+              </MobileLink>
             </Button>
             <Button className="h-[50px] w-[152px] justify-center">
               Tickets

@@ -16,11 +16,14 @@ export function MainNav() {
         <Image src={logo} width={210} alt="Logo" />
       </Link>
       <nav className="flex items-center gap-8 text-body font-semibold">
-        {path === "/lineup" ? (
-          <p className="opacity-70">Lineup</p>
+        {path === "/silent-auction" ? (
+          <p className="opacity-70">Silent Auction</p>
         ) : (
-          <Link className="hover:underline underline-offset-8" href="/lineup">
-            Lineup
+          <Link
+            className="hover:underline underline-offset-8"
+            href="/silent-auction"
+          >
+            Silent Auction
           </Link>
         )}
 
@@ -39,7 +42,7 @@ export function MainNav() {
           variant="secondary"
           className="h-[50px] w-[150px] justify-center hover:border-secondary-evergreen hover:text-secondary-evergreen"
         >
-          <a href="/">Donate</a>
+          <Link href="/donate">Donate</Link>
         </Button>
         <Button asChild className="h-[50px] w-[150px] justify-center">
           <a href="/">Tickets</a>

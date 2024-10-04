@@ -1,18 +1,23 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import bow from "../../public/bow.png";
 import band from "../../public/band.png";
 import blueBoltLogo from "../../public/blue-bolt-logo.png";
 import majorLogo from "../../public/major-danger-studio-logo.png";
-import cookiesLogo from "../../public/cookies-logo.png";
 import cookie from "../../public/cookie.png";
-import newHopeLogo from "../../public/newhope.png";
 import catDog from "../../public/cat-dog.png";
+import newHopeLogo from "../../public/new-hope-logo.png";
 import { Icons } from "@/components/icons";
+import { CountdownTimer } from "@/components/countdown-timer";
+import { SupportDetail } from "@/components/support-detail";
+import { CustomVideo } from "@/components/custom-video";
 
 export default function Home() {
+  const targetDate = "2024-12-07T18:00:00";
+
   return (
-    <main>
+    <>
       <section className="px-default py-9 lg:py-24">
         <div className="mx-auto max-w-screen-xl lg:grid lg:grid-cols-7 lg:gap-5">
           <div className="lg:col-span-5 space-y-4">
@@ -49,19 +54,12 @@ export default function Home() {
               />
             </div>
 
-            <div className="hidden lg:block space-y-3">
-              <Button
-                asChild
-                className="w-full max-w-[300px]
-              "
-              >
+            <div className="hidden lg:block">
+              <Button asChild className="w-full max-w-[300px]">
                 <a href="/" className="mt-8">
                   Get Your Tickets <Icons.star className="size-5" />
                 </a>
               </Button>
-              <p className="italic text-caption">
-                25% Off Bundles Available until October 31
-              </p>
             </div>
           </div>
 
@@ -73,16 +71,11 @@ export default function Home() {
 
           <div className="flex flex-col lg:hidden mt-8">
             <Image src={cookie} alt="cookie" className="self-center" />
-            <div className="space-y-3">
-              <Button asChild className="w-full">
-                <a href="/" className="mt-8">
-                  Get Your Tickets <Icons.star className="size-5" />
-                </a>
-              </Button>
-              <p className="italic text-caption text-center">
-                25% Off Bundles Available until October 31
-              </p>
-            </div>
+            <Button asChild className="w-full">
+              <a href="/" className="mt-8">
+                Get Your Tickets <Icons.star className="size-5" />
+              </a>
+            </Button>
           </div>
         </div>
       </section>
@@ -127,7 +120,7 @@ export default function Home() {
 
       <section className="md:pl-default mx-auto max-w-screen-xl md:grid md:grid-cols-5 md:items-center md:py-20 bg-neutral lg:bg-inherit">
         <Image src={band} alt="band" className="md:col-span-3 order-2" />
-        <div className="px-[38px] py-8 space-y-default shadow-md rounded-lg md:col-span-2 md:-mr-20 md:bg-neutral md:order-1 md:z-10">
+        <div className="px-[38px] py-8 space-y-default shadow-md lg:rounded-[28px] md:col-span-2 md:-mr-20 md:bg-neutral md:order-1 md:z-10">
           <h2 className="font-bevan text-h2 text-secondary-blue">
             Dance the <span className="line-clamp-2">Night Away</span>
           </h2>
@@ -145,153 +138,66 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-4 pt-11 pb-10 lg:pb-40 bg-secondary-blue relative lg:max-w-screen-xl lg:mx-auto lg:rounded-2xl">
-        <div className="mx-auto max-w-screen-xl">
-          <p className="font-heading lg:font-christmas text-h1 lg:text-callout text-center text-secondary-goldstar mb-2">
+      <section className="md:pl-default mx-auto max-w-screen-xl md:grid md:grid-cols-5 md:items-center md:py-20 bg-neutral lg:bg-inherit">
+        <div className="col-span-3">
+          <CustomVideo />
+        </div>
+        <div className="px-[38px] py-12 space-y-default shadow-md rounded-[28px] md:col-span-2 md:-ml-20 md:bg-neutral md:z-10">
+          <Image src={newHopeLogo} width={340} alt="New Hope Animal Rescue" />
+          <p className="text-2xl leading-normal">
+            Support volunteers providing foster care for rescued dogs and cats
+            with the resources and medical care needed to find our furry friends
+            forever homes.
+          </p>
+        </div>
+      </section>
+
+      <section className="px-4 pt-11 pb-20 xl:pb-40 bg-secondary-blue lg:max-w-screen-xl lg:mx-auto lg:rounded-[28px]">
+        <div className="relative">
+          <p className="font-heading text-h1 text-center text-secondary-goldstar mb-2 lg:font-christmas lg:text-callout">
             Ways to Support
           </p>
           <p className="text-body text-center text-primary-snow">
             All proceeds benefit New Hope Animal Rescue
           </p>
-          <Image
-            src={newHopeLogo}
-            alt="new hope animal rescue"
-            className="absolute top-12 right-8 hidden xl:block"
-          />
 
-          <div className="grid xl:hidden mt-20 lg:grid-cols-2 xl:grid-cols-4 place-items-center gap-20">
-            <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative">
-              <Image
-                className="absolute -top-8 left-0 scale-150"
-                src={bow}
-                alt="bow"
-              />
-              <div className="space-y-3">
-                <h3 className="font-bevan text-h3 text-primary">
-                  Silent Auction
-                </h3>
-                <p className="text-bodysm">
-                  Bid during the event to win special prizes
-                </p>
-              </div>
-            </div>
-
-            <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative">
-              <Image
-                className="absolute -top-8 left-0 scale-150"
-                src={bow}
-                alt="bow"
-              />
-              <div className="space-y-3">
-                <h3 className="font-bevan text-h3 text-primary">Giving Tree</h3>
-                <p className="text-bodysm">
-                  Scan the Giving Tree QR code to donate.
-                </p>
-              </div>
-            </div>
-
-            <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative">
-              <Image
-                className="absolute -top-8 left-0 scale-150"
-                src={bow}
-                alt="bow"
-              />
-              <div className="space-y-3">
-                <h3 className="font-bevan text-h3 text-primary">
-                  Holiday Bonus
-                </h3>
-                <p className="text-bodysm">
-                  Donate when purchasing your ticket.
-                </p>
-              </div>
-            </div>
-
-            <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative">
-              <Image
-                className="absolute -top-8 left-0 scale-150"
-                src={bow}
-                alt="bow"
-              />
-              <div className="space-y-3">
-                <h3 className="font-bevan text-h3 text-primary">
-                  Gift Exchange
-                </h3>
-                <p className="text-bodysm">
-                  Donate new items or professional services to the silent
-                  auction.
-                </p>
-              </div>
-            </div>
-            <Image
-              src={newHopeLogo}
-              alt="new hope animal rescue"
-              className="lg:col-span-2"
+          <div className="grid mt-20 gap-20 lg:grid-cols-2 xl:grid-cols-4 place-items-center xl:absolute xl:w-full">
+            <SupportDetail
+              heading="Silent Auction"
+              description="Bid during the event to win special prizes"
+            />
+            <SupportDetail
+              heading="Giving Tree"
+              description="Scan the Giving Tree QR code to donate"
+            />
+            <SupportDetail
+              heading="Holiday Bonus"
+              description="Donate when purchasing your ticket"
+            />
+            <SupportDetail
+              heading="Gift Exchange"
+              description="Donate new items or professional services to the silent auction."
             />
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-screen-xl text-center px-10 pt-8 pb-20">
-        <div className="hidden xl:grid xl:grid-cols-4 place-items-center gap-20 -mt-28 mb-16">
-          <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative shadow-md">
-            <Image
-              className="absolute -top-8 left-0 scale-150"
-              src={bow}
-              alt="bow"
-            />
-            <div className="space-y-3">
-              <h3 className="font-bevan text-h3 text-primary">
-                Silent Auction
-              </h3>
-              <p className="text-bodysm">
-                Bid during the event to win special prizes
-              </p>
-            </div>
-          </div>
+      <section className="max-w-screen-xl mx-auto px-default"></section>
 
-          <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative shadow-md">
-            <Image
-              className="absolute -top-8 left-0 scale-150"
-              src={bow}
-              alt="bow"
-            />
-            <div className="space-y-3">
-              <h3 className="font-bevan text-h3 text-primary">Giving Tree</h3>
-              <p className="text-bodysm">
-                Scan the Giving Tree QR code to donate.
-              </p>
-            </div>
-          </div>
-
-          <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative shadow-md">
-            <Image
-              className="absolute -top-8 left-0 scale-150"
-              src={bow}
-              alt="bow"
-            />
-            <div className="space-y-3">
-              <h3 className="font-bevan text-h3 text-primary">Holiday Bonus</h3>
-              <p className="text-bodysm">Donate when purchasing your ticket.</p>
-            </div>
-          </div>
-
-          <div className="size-48 bg-neutral px-4 py-6 rounded-lg relative shadow-md">
-            <Image
-              className="absolute -top-8 left-0 scale-150"
-              src={bow}
-              alt="bow"
-            />
-            <div className="space-y-3">
-              <h3 className="font-bevan text-h3 text-primary">Gift Exchange</h3>
-              <p className="text-bodysm">
-                Donate new items or professional services to the silent auction.
-              </p>
-            </div>
-          </div>
+      <section className="max-w-screen-xl mx-auto px-default text-center pt-8 pb-24 xl:pb-28 xl:pt-48">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 xl:gap-16">
+          <Icons.star className="text-secondary-goldstar size-8" />
+          <CountdownTimer targetDate={targetDate} />
+          <Icons.star className="text-secondary-goldstar size-8" />
         </div>
-        <p className="font-christmas text-callout text-primary">
+        <h2 className="font-bevan text-h2 text-primary text-center mt-5">
+          Until the Event
+        </h2>
+
+        <p className="font-christmas text-callout text-primary mt-16">
           Can&rsquo;t Wait &lsquo;Til Christmas?
         </p>
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-8">
           <Button variant="secondary" asChild className="w-full max-w-[310px]">
             <a href="/">
@@ -311,17 +217,16 @@ export default function Home() {
           <h2 className="font-bevan text-h2 text-secondary-goldstar text-center">
             Sponsored by
           </h2>
-          <div className="flex flex-col md:flex-row items-center justify-evenly gap:8">
+          <div className="flex flex-col md:flex-row items-center justify-around gap:8">
             <a href="https://www.bluebolthomeservices.com" target="_blank">
               <Image src={blueBoltLogo} alt="Blue Bolt Home Services" />
             </a>
             <a href="https://www.majordanger.com" target="_blank">
               <Image src={majorLogo} alt="Major Danger Studio" />
             </a>
-            <Image src={cookiesLogo} alt="Cookies" />
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 }

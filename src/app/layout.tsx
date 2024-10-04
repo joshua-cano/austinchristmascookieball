@@ -55,7 +55,7 @@ export default function RootLayout({
         ></div>
         <div className="relative z-10">
           <Header />
-          {children}
+          <main>{children}</main>
           <Footer />
         </div>
         <Toaster />

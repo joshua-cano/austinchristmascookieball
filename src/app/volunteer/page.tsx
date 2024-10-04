@@ -7,8 +7,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Icons } from "@/components/icons";
-import { donationFormSchema, volunteerFormSchema } from "@/lib/schemas";
-import { sendVolunteer, sendDonation } from "@/lib/airtable";
+import { volunteerFormSchema } from "@/lib/schemas";
+import { sendVolunteer } from "@/lib/airtable";
 
 import {
   Form,
@@ -33,27 +33,6 @@ const Volunteer = () => {
     },
   });
 
-  const donationForm = useForm<z.infer<typeof donationFormSchema>>({
-    resolver: zodResolver(donationFormSchema),
-    defaultValues: {
-      name: "",
-      donation: "",
-      price: "",
-      bid: "",
-      phone: "",
-      email: "",
-    },
-  });
-
-  // 2. Define a submit handler.
-  function onDonationSubmit(values: z.infer<typeof donationFormSchema>) {
-    sendDonation(values);
-    toast({
-      title: "Form has been submitted",
-    });
-    donationForm.reset();
-  }
-
   function onVolunteerSubmit(values: z.infer<typeof volunteerFormSchema>) {
     sendVolunteer(values);
     toast({
@@ -63,8 +42,8 @@ const Volunteer = () => {
   }
 
   return (
-    <main>
-      <section className="px-default py-9 lg:py-24">
+    <>
+      <section className="px-default pt-9 pb-20 lg:py-24">
         <div className="mx-auto max-w-screen-xl">
           <div className="lg:col-span-2 space-y-6">
             <div>
@@ -76,26 +55,34 @@ const Volunteer = () => {
               </h1>
             </div>
 
-            <div className="space-y-3">
-              <Button asChild className="w-full max-w-[300px]">
-                <a href="/">
-                  Get Your Tickets <Icons.star />
-                </a>
-              </Button>
-              <p className="italic text-caption">
-                25% Off Bundles Available until October 31
-              </p>
-            </div>
+            <Button asChild className="w-full max-w-[300px]">
+              <a href="/">
+                Get Your Tickets <Icons.star />
+              </a>
+            </Button>
           </div>
         </div>
       </section>
-      <section className="max-w-screen-xl mx-auto px-default">
-        <h2 className="text-h2 font-bevan text-center mb-10">Volunteer</h2>
+      <section className="max-w-screen-xl mx-auto px-default pb-12">
+        <header className="xl:max-w-[1120px] mx-auto">
+          <h2 className="text-h2 font-bevan text-center mb-7 xl:mb-default">
+            Volunteer
+          </h2>
+          <p className="text-body mb-11 xl:mb-7">
+            Interested in helping make{" "}
+            <span className="font-bold">
+              Austin Christmas Cookie &apos;Boot Scootin&apos; Ball
+            </span>{" "}
+            a success? Support the event with set up, break down, greeting, and
+            other services. To join the Volunteer Team, fill out the form below.
+            We&apos;ll reach out with details and next steps soon.
+          </p>
+        </header>
 
         <Form {...volunteerForm}>
           <form
             onSubmit={volunteerForm.handleSubmit(onVolunteerSubmit)}
-            className="space-y-8 bg-neutral-forms px-default py-8 md:p-12 rounded-lg shadow-md"
+            className="space-y-12 bg-neutral-forms px-default py-8 md:p-12 rounded-lg shadow-md"
           >
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -187,149 +174,7 @@ const Volunteer = () => {
           </form>
         </Form>
       </section>
-
-      <section className="max-w-screen-xl mx-auto px-default pt-20 pb-12">
-        <h2 className="text-h2 font-bevan text-center mb-10">
-          Silent Auction Donation
-        </h2>
-        <Form {...donationForm}>
-          <form
-            onSubmit={donationForm.handleSubmit(onDonationSubmit)}
-            className="space-y-8 bg-neutral-forms px-default py-8 md:p-12 rounded-lg shadow-md"
-          >
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <FormField
-                  control={donationForm.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name*</FormLabel>
-                      <FormControl>
-                        <Input placeholder="First & Last Name" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              <div>
-                <FormField
-                  control={donationForm.control}
-                  name="donation"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>What are you donating?*</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Donation" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              <div>
-                <FormField
-                  control={donationForm.control}
-                  name="price"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Retail Price*</FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="$100"
-                          {...field}
-                          type="number"
-                          inputMode="decimal"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              <div>
-                <FormField
-                  control={donationForm.control}
-                  name="bid"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>
-                        Suggested Starting Bid{" "}
-                        <span className="text-bodysm font-light">
-                          (optional)
-                        </span>
-                      </FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="$50"
-                          type="number"
-                          inputMode="decimal"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              <div>
-                <FormField
-                  control={donationForm.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>
-                        Phone{" "}
-                        <span className="text-bodysm font-light">
-                          (optional)
-                        </span>
-                      </FormLabel>
-                      <FormControl>
-                        <Input
-                          type="tel"
-                          placeholder="(512) 555-0000"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              <div>
-                <FormField
-                  control={donationForm.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email*</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="email"
-                          placeholder="email@gmail.com"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <Button
-                variant="blue"
-                type="submit"
-                className="h-[50px] w-[150px]"
-              >
-                Submit
-              </Button>
-            </div>
-          </form>
-        </Form>
-      </section>
-    </main>
+    </>
   );
 };
 

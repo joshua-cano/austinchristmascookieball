@@ -109,7 +109,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({
 
   return (
     <div
-      className="flex flex-col md:flex-row gap-6 justify-center items-center"
+      className="flex flex-col md:flex-row gap-6 lg:gap-20 justify-center items-center"
       role="timer"
       aria-live="polite"
       aria-label="Countdown Timer"
