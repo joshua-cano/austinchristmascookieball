@@ -136,7 +136,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="md:pl-default mx-auto max-w-screen-xl md:grid md:grid-cols-5 md:items-center md:py-20 bg-neutral lg:bg-inherit">
+      <section className="md:pl-default mx-auto max-w-screen-xl md:grid md:grid-cols-5 md:items-center md:pb-32 md:pt-20 bg-neutral lg:bg-inherit">
         <div className="col-span-3">
           <CustomVideo />
         </div>
@@ -180,8 +180,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-screen-xl mx-auto px-default"></section>
-
       <section className="max-w-screen-xl mx-auto px-default text-center pt-8 pb-24 xl:pb-28 xl:pt-48">
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 xl:gap-16">
           <Icons.star className="text-secondary-goldstar size-8" />
@@ -198,12 +196,12 @@ export default function Home() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-8">
           <Button variant="secondary" asChild className="w-full max-w-[310px]">
-            <a href="/">
+            <a href="/donate">
               Donate Now! <Icons.donate />
             </a>
           </Button>
           <Button asChild className="w-full max-w-[310px]">
-            <a href="/">
+            <a href="/silent-auction">
               Silent Auction Gift <Icons.gift />
             </a>
           </Button>

@@ -52,7 +52,7 @@ const Volunteer = () => {
       </section>
 
       <section className="max-w-screen-xl mx-auto px-default">
-        <div className="grid lg:grid-cols-3 gap-8 text-center items-center bg-[#eff6ff]">
+        <div className="grid lg:grid-cols-3 gap-8 text-center items-center">
           <div className="space-y-12 bg-neutral py-12 rounded-lg">
             <h2 className="text-h2 font-bevan">Paypal</h2>
             <Button variant="secondary">Donate via PayPal</Button>
