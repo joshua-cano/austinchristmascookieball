@@ -59,7 +59,10 @@ const Volunteer = () => {
           <div className="space-y-12 bg-neutral py-12 rounded-lg">
             <h2 className="text-h2 font-bevan">Paypal</h2>
             <Button variant="secondary">
-              <a href="/" target="_blank">
+              <a
+                href="https://www.paypal.com/paypalme/austinxmascookieball?country.x=US&locale.x=en_US"
+                target="_blank"
+              >
                 Donate via Paypal
               </a>
             </Button>

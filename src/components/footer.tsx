@@ -35,7 +35,7 @@ export const Footer = () => {
             >
               Volunteer
             </Link>
-            <a className="hover:underline underline-offset-8" href="/">
+            <a className="hover:underline underline-offset-8" href="/donate">
               Donate
             </a>
           </div>
