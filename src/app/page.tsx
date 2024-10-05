@@ -164,7 +164,7 @@ export default function Home() {
             Ways to Support
           </p>
           <p className="text-body text-center text-primary-snow">
-            All proceeds benefit New Hope Animal Rescue
+            Proceeds benefit New Hope Animal Rescue
           </p>
 
           <div className="grid mt-20 gap-20 lg:grid-cols-2 xl:grid-cols-4 place-items-center xl:absolute xl:w-full">
@@ -178,7 +178,7 @@ export default function Home() {
             />
             <SupportDetail
               heading="Holiday Bonus"
-              description="Donate when purchasing your ticket"
+              description="Invite Friends and Family to join the fun!"
             />
             <SupportDetail
               heading="Gift Exchange"
