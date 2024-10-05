@@ -19,6 +19,7 @@ export const sendVolunteer = async (
       Phone: formData.phone,
       Email: formData.email,
     },
+    { typecast: true },
     function (err, record) {
       if (err) {
         console.error(err);
