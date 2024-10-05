@@ -58,15 +58,33 @@ const Volunteer = () => {
         <div className="grid lg:grid-cols-3 gap-8 text-center items-center">
           <div className="space-y-12 bg-neutral py-12 rounded-lg">
             <h2 className="text-h2 font-bevan">Paypal</h2>
-            <Button variant="secondary">Donate via PayPal</Button>
+            <Button variant="secondary">
+              <a href="/" target="_blank">
+                Donate via Paypal
+              </a>
+            </Button>
           </div>
           <div className="space-y-12 bg-neutral py-12 rounded-lg">
             <h2 className="text-h2 font-bevan">Square</h2>
-            <Button variant="secondary">Donate via Square</Button>
+            <Button variant="secondary">
+              <a
+                href="https://square.link/u/nkbPwW7m?src=sheet"
+                target="_blank"
+              >
+                Donate via Square
+              </a>
+            </Button>
           </div>
           <div className="space-y-12 bg-neutral py-12 rounded-lg">
             <h2 className="text-h2 font-bevan">Venmo</h2>
-            <Button variant="secondary">Donate via Venmo</Button>
+            <Button variant="secondary">
+              <a
+                href="https://account.venmo.com/payment-link?audience=public&recipients=%2Cmark-Edwards-35&txn=pay"
+                target="_blank"
+              >
+                Donate via Venmo
+              </a>
+            </Button>
           </div>
         </div>
       </section>
