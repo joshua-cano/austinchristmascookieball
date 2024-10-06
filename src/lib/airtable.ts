@@ -16,7 +16,7 @@ export const sendVolunteer = async (
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   const { data } = await resend.emails.send({
-    from: "ACB <onboarding@resend.dev>",
+    from: "ACB <hello@austinchristmascookieball.com>",
     to: "mark@bluebolthomeservices.com",
     subject: "Volunteer Form ACB",
     react: VolunteerTemplate({
@@ -57,7 +57,7 @@ export const sendDonation = async (
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   const { data } = await resend.emails.send({
-    from: "ACB <onboarding@resend.dev>",
+    from: "ACB <hello@austinchristmascookieball.com>",
     to: "mark@bluebolthomeservices.com",
     subject: "Silent Auction Form ACB",
     react: SilentAuctionTemplate({
