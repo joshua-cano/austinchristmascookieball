@@ -17,7 +17,7 @@ export const sendVolunteer = async (
 ) => {
   const { data } = await resend.emails.send({
     from: "ACB <onboarding@resend.dev>",
-    to: ["joshua.cano18@gmail.com", "joshcano14@hotmail.com"],
+    to: "mark@bluebolthomeservices.com",
     subject: "Volunteer Form ACB",
     react: VolunteerTemplate({
       name: formData.name,
@@ -56,7 +56,7 @@ export const sendDonation = async (
 ) => {
   const { data } = await resend.emails.send({
     from: "ACB <onboarding@resend.dev>",
-    to: ["joshua.cano18@gmail.com", "joshcano14@hotmail.com"],
+    to: "mark@bluebolthomeservices.com",
     subject: "Silent Auction Form ACB",
     react: SilentAuctionTemplate({
       name: formData.name,
