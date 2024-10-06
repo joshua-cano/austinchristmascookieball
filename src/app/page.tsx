@@ -151,9 +151,9 @@ export default function Home() {
         <div className="px-[38px] py-12 space-y-default shadow-md rounded-[28px] md:col-span-2 md:-ml-20 md:bg-neutral md:z-10">
           <Image src={newHopeLogo} width={340} alt="New Hope Animal Rescue" />
           <p className="text-2xl leading-normal">
-            Support dogs and cats, puppies and kittens, saved from kill shelters
-            with the resources and medical care they need to find their loving
-            forever homes..
+            Support dogs and cats, puppies and kittens, saved from euthanasia
+            shelters with the resources and medical care they need to find their
+            loving forever homes..
           </p>
         </div>
       </section>

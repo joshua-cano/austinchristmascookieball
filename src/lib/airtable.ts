@@ -9,12 +9,12 @@ import {
 } from "@/components/email-template";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Volunteer
 export const sendVolunteer = async (
   formData: z.infer<typeof volunteerFormSchema>
 ) => {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   const { data } = await resend.emails.send({
     from: "ACB <onboarding@resend.dev>",
     to: "mark@bluebolthomeservices.com",
@@ -54,6 +54,8 @@ export const sendVolunteer = async (
 export const sendDonation = async (
   formData: z.infer<typeof donationFormSchema>
 ) => {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   const { data } = await resend.emails.send({
     from: "ACB <onboarding@resend.dev>",
     to: "mark@bluebolthomeservices.com",
