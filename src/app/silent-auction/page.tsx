@@ -130,7 +130,7 @@ const SilentAuction = () => {
                     <FormItem>
                       <FormLabel>Retail Price*</FormLabel>
                       <FormControl>
-                        <Input placeholder="Example... $100" {...field} />
+                        <Input placeholder="e.g. $100" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -150,7 +150,7 @@ const SilentAuction = () => {
                         </span>
                       </FormLabel>
                       <FormControl>
-                        <Input placeholder="Example... $50" {...field} />
+                        <Input placeholder="e.g. $50" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

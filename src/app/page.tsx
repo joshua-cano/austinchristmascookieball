@@ -153,7 +153,7 @@ export default function Home() {
           <p className="text-2xl leading-normal">
             Support dogs and cats, puppies and kittens, saved from euthanasia
             shelters with the resources and medical care they need to find their
-            loving forever homes..
+            loving forever homes.
           </p>
         </div>
       </section>
@@ -170,11 +170,11 @@ export default function Home() {
           <div className="grid mt-20 gap-20 lg:grid-cols-2 xl:grid-cols-4 place-items-center xl:absolute xl:w-full">
             <SupportDetail
               heading="Silent Auction"
-              description="Bid during the event to win special prizes"
+              description="Bid during the event to win special prizes."
             />
             <SupportDetail
               heading="Giving Tree"
-              description="Scan the Giving Tree QR code to donate"
+              description="Scan the Giving Tree QR code to donate."
             />
             <SupportDetail
               heading="Holiday Bonus"
