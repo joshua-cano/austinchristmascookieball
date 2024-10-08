@@ -27,6 +27,28 @@ export const sendVolunteer = async (
   });
 
   console.log(data);
+
+  const webhookUrl = process.env.MAKE_WEBHOOK_URL_VOLUNTEER;
+
+  // Call Make webhook with form data
+  const response = await fetch(webhookUrl!, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: formData.name,
+      volunteer: formData.volunteer,
+      phone: formData.phone,
+      email: formData.email,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to send data to webhook");
+  }
+
+  console.log("Webhook sent successfully");
 };
 
 // Donation
@@ -50,4 +72,28 @@ export const sendDonation = async (
   });
 
   console.log(data);
+
+  const webhookUrl = process.env.MAKE_WEBHOOK_URL_AUCTION;
+
+  // Call Make webhook with form data
+  const response = await fetch(webhookUrl!, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: formData.name,
+      donation: formData.donation,
+      price: formData.price,
+      bid: formData.bid,
+      phone: formData.phone,
+      email: formData.email,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to send data to webhook");
+  }
+
+  console.log("Webhook sent successfully");
 };
