@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Icons } from "@/components/icons";
 import { volunteerFormSchema } from "@/lib/schemas";
-import { sendVolunteer } from "@/lib/airtable";
+import { sendVolunteer } from "@/lib/actions";
 
 import {
   Form,

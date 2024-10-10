@@ -38,7 +38,7 @@ export const sendVolunteer = async (
     },
     body: JSON.stringify({
       name: formData.name,
-      volunteer: formData.volunteer,
+      role: formData.volunteer,
       phone: formData.phone,
       email: formData.email,
     }),

@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Icons } from "@/components/icons";
 import { donationFormSchema } from "@/lib/schemas";
-import { sendDonation } from "@/lib/airtable";
+import { sendDonation } from "@/lib/actions";
 
 import {
   Form,
