@@ -60,7 +60,7 @@ const Volunteer = () => {
             <h2 className="text-h2 font-bevan">Paypal</h2>
             <Button variant="secondary">
               <a
-                href="https://www.paypal.com/paypalme/austinxmascookieball?country.x=US&locale.x=en_US"
+                href="https://www.paypal.me/austinchristmasball?locale.x=en_US"
                 target="_blank"
               >
                 Donate via Paypal
