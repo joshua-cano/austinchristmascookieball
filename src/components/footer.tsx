@@ -1,6 +1,6 @@
 import Image from "next/image";
 import logo from "../../public/logo-dark.png";
-// import { FaFacebook } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 // import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 
@@ -10,10 +10,12 @@ export const Footer = () => {
       <div className="md:grid md:grid-cols-2 md:gap-8">
         <div>
           <Image src={logo} alt="logo" width={270} className="mb-5" />
-          {/* <div className="flex gap-4 mb-32">
-            <FaFacebook size={32} />
-            <FaInstagram size={32} />
-          </div> */}
+          <div className="flex gap-4 mb-32">
+            <a href="https://www.facebook.com/share/8AfgbV9atREPeH1t/?mibextid=LQQJ4d">
+              <FaFacebook size={32} />
+            </a>
+            {/* <FaInstagram size={32} /> */}
+          </div>
         </div>
 
         <div>
