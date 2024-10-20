@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import band from "../../public/band.png";
-import blueBoltLogo from "../../public/blue-bolt-logo.png";
-import majorLogo from "../../public/major-danger-studio-logo.png";
+import goodDogLogo from "../../public/gooddog-logo.png";
 import cookie from "../../public/cookie.png";
 import catDog from "../../public/cat-dog.png";
 import newHopeLogo from "../../public/new-hope-logo.png";
@@ -218,16 +217,20 @@ export default function Home() {
 
       <section className="bg-secondary-blue p-8 space-y-8 ">
         <div className="max-w-screen-xl mx-auto">
-          <h2 className="font-bevan text-h2 text-secondary-goldstar text-center">
-            Sponsored by
+          <h2 className="font-bevan text-[24px] md:text-[28px] max-w-2xl mx-auto leading-normal text-secondary-goldstar text-center">
+            Thank You To These Local Businesses For Their Generous Donations
           </h2>
-          <div className="flex flex-col md:flex-row items-center justify-around gap:8">
-            <a href="https://www.bluebolthomeservices.com" target="_blank">
-              <Image src={blueBoltLogo} alt="Blue Bolt Home Services" />
+          <div className="flex flex-col md:flex-row items-center justify-around gap:8 mt-8">
+            <a href="https://www.gooddogtraining.biz" target="_blank">
+              <Image
+                src={goodDogLogo}
+                className="w-48"
+                alt="Good Dog Training"
+              />
             </a>
-            <a href="https://www.majordanger.com" target="_blank">
+            {/* <a href="https://www.majordanger.com" target="_blank">
               <Image src={majorLogo} alt="Major Danger Studio" />
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
