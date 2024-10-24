@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import band from "../../public/band.png";
 import goodDogLogo from "../../public/gooddog-logo.png";
+import pawsLogo from "../../public/paws-logo.png";
 import cookie from "../../public/cookie.png";
 import catDog from "../../public/cat-dog.png";
 import newHopeLogo from "../../public/new-hope-logo.png";
@@ -238,6 +239,13 @@ export default function Home() {
                 src={goodDogLogo}
                 className="w-48"
                 alt="Good Dog Training"
+              />
+            </a>
+            <a href="https://www.pawsonchicon.com/" target="_blank">
+              <Image
+                src={pawsLogo}
+                className="w-28 mt-8 md:mt-0"
+                alt="Paws on Chicon"
               />
             </a>
           </div>
