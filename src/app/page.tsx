@@ -8,6 +8,7 @@ import catDog from "../../public/cat-dog.png";
 import newHopeLogo from "../../public/new-hope-logo.png";
 import majorLogo from "../../public/major-danger-studio-logo.png";
 import blueboltLogo from "../../public/blue-bolt-logo.png";
+import dancingAustinLogo from "../../public/dancin-austin-logo.png";
 import { Icons } from "@/components/icons";
 import { CountdownTimer } from "@/components/countdown-timer";
 import { SupportDetail } from "@/components/support-detail";
@@ -225,11 +226,7 @@ export default function Home() {
           </h2>
           <div className="flex flex-col md:flex-row items-center lg:justify-around gap-8 mt-8">
             <a href="https://www.bluebolthomeservices.com" target="_blank">
-              <Image
-                src={blueboltLogo}
-                // className="w-48"
-                alt="Blue Bolt Home Services"
-              />
+              <Image src={blueboltLogo} alt="Blue Bolt Home Services" />
             </a>
             <a href="https://www.majordanger.com" target="_blank">
               <Image src={majorLogo} alt="Major Danger Studio" />
@@ -237,14 +234,21 @@ export default function Home() {
             <a href="https://www.gooddogtraining.biz" target="_blank">
               <Image
                 src={goodDogLogo}
-                className="w-48"
+                className="w-40"
                 alt="Good Dog Training"
               />
             </a>
             <a href="https://www.pawsonchicon.com/" target="_blank">
               <Image
                 src={pawsLogo}
-                className="w-28 mt-8 md:mt-0"
+                className="w-24 mt-8 md:mt-0"
+                alt="Paws on Chicon"
+              />
+            </a>
+            <a href="https://www.dancinaustin.com/" target="_blank">
+              <Image
+                src={dancingAustinLogo}
+                className="w-40"
                 alt="Paws on Chicon"
               />
             </a>
