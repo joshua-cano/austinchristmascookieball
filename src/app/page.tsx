@@ -10,6 +10,7 @@ import majorLogo from "../../public/major-danger-studio-logo.png";
 import blueboltLogo from "../../public/blue-bolt-logo.png";
 import dancingAustinLogo from "../../public/dancin-austin-logo.png";
 import southpawsLogo from "../../public/southpaws-logo.png";
+import bettyLogo from "../../public/betty.png";
 import { Icons } from "@/components/icons";
 import { CountdownTimer } from "@/components/countdown-timer";
 import { SupportDetail } from "@/components/support-detail";
@@ -220,50 +221,58 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-secondary-blue p-8 space-y-8 ">
+      <section className="bg-secondary-blue p-8 space-y-8">
         <div className="max-w-screen-xl mx-auto">
           <h2 className="font-bevan text-[24px] md:text-[28px] max-w-2xl mx-auto leading-normal text-secondary-goldstar text-center">
             Thank You To These Local Businesses For Their Generous Donations
           </h2>
-          <div className="grid lg:grid-cols-3 place-items-center gap-8 lg:gap-6 mt-8">
-            <a href="https://www.bluebolthomeservices.com" target="_blank">
-              <Image
-                src={blueboltLogo}
-                alt="Blue Bolt Home Services"
-                className="-mb-5 lg:mb-0"
-              />
-            </a>
-            <a href="https://www.majordanger.com" target="_blank">
-              <Image src={majorLogo} alt="Major Danger Studio" />
-            </a>
-            <a href="https://www.gooddogtraining.biz" target="_blank">
-              <Image
-                src={goodDogLogo}
-                className="w-48"
-                alt="Good Dog Training"
-              />
-            </a>
-            <a href="https://www.pawsonchicon.com" target="_blank">
-              <Image
-                src={pawsLogo}
-                className="w-24 mt-8 md:mt-0"
-                alt="Paws on Chicon"
-              />
-            </a>
-            <a href="https://www.dancinaustin.com" target="_blank">
-              <Image
-                src={dancingAustinLogo}
-                className="w-48"
-                alt="Paws on Chicon"
-              />
-            </a>
-            <a href="https://southpawsplayschool.com" target="_blank">
-              <Image
-                src={southpawsLogo}
-                className="w-40"
-                alt="Paws on Chicon"
-              />
-            </a>
+          <div className=" gap-8 lg:gap-6 mt-8 space-y-8">
+            <div className="grid lg:grid-cols-4 place-items-center gap-8">
+              <a href="https://www.bluebolthomeservices.com" target="_blank">
+                <Image
+                  src={blueboltLogo}
+                  alt="Blue Bolt Home Services"
+                  className="-mb-8 lg:mb-0"
+                />
+              </a>
+              <a href="https://www.majordanger.com" target="_blank">
+                <Image src={majorLogo} alt="Major Danger Studio" />
+              </a>
+              <a href="https://www.gooddogtraining.biz" target="_blank">
+                <Image
+                  src={goodDogLogo}
+                  className="w-48"
+                  alt="Good Dog Training"
+                />
+              </a>
+              <a href="https://www.pawsonchicon.com" target="_blank">
+                <Image
+                  src={pawsLogo}
+                  className="w-24 mt-8 md:mt-0"
+                  alt="Paws on Chicon"
+                />
+              </a>
+            </div>
+
+            <div className="flex flex-col gap-12 lg:gap-4 lg:flex-row items-center justify-around">
+              <a href="https://www.dancinaustin.com" target="_blank">
+                <Image
+                  src={dancingAustinLogo}
+                  className="w-48"
+                  alt="Paws on Chicon"
+                />
+              </a>
+              <a href="https://southpawsplayschool.com" target="_blank">
+                <Image
+                  src={southpawsLogo}
+                  className="w-40"
+                  alt="Paws on Chicon"
+                />
+              </a>
+              <a href="https://urbanbetty.com" target="_blank">
+                <Image src={bettyLogo} className="w-40" alt="Paws on Chicon" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
