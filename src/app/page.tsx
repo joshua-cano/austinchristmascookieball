@@ -127,6 +127,23 @@ export default function Home() {
                 <p>207 W 18th Street</p>
                 <p>Austin, TX 78701</p>
               </div>
+              <div>
+                <h3 className="font-bevan text-h3">Details</h3>
+                <ul className="list-disc ml-8 text-body">
+                  <li>
+                    The dress code for the event is Cowboy Festive Holiday
+                    attire or whatever the hell you want to wear. Yeehaw!
+                  </li>
+                  <li>
+                    BYOB. Ice, cups and other non-alcoholic refreshments
+                    provided.
+                  </li>
+                  <li>
+                    Limited free parking in SRT lot and on the street. Paid
+                    parking at Bob Bullock Museum next door.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -146,7 +163,7 @@ export default function Home() {
             Jeff Hughes and Chaparral
           </p>
           <p className="text-2xl leading-normal font-bold">
-            Two-Step Dance Lessons by Rona{" "}
+            Two-Step Dance Lessons start{" "}
             <span className="font-normal">at 7:15pm</span>
           </p>
         </div>
