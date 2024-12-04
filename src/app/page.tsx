@@ -14,6 +14,7 @@ import bettyLogo from "../../public/betty.png";
 import fossilLogo from "../../public/fossil-ridge-logo.png";
 import backupBakery from "../../public/backup-bakery.jpeg";
 import aryelMuse from "../../public/aryel-muse.jpeg";
+import skyHill from "../../public/skyhill.png";
 import { Icons } from "@/components/icons";
 import { CountdownTimer } from "@/components/countdown-timer";
 import { SupportDetail } from "@/components/support-detail";
@@ -246,7 +247,7 @@ export default function Home() {
           <h2 className="font-bevan text-[24px] md:text-[28px] max-w-2xl mx-auto leading-normal text-secondary-goldstar text-center">
             Thank You To These Local Businesses For Their Generous Donations
           </h2>
-          <div className="grid lg:grid-cols-5 gap-12 mt-8 place-items-center">
+          <div className="grid lg:grid-cols-4 gap-12 mt-8 place-items-center">
             <a href="https://www.bluebolthomeservices.com" target="_blank">
               <Image
                 src={blueboltLogo}
@@ -292,8 +293,13 @@ export default function Home() {
             <a href="https://www.fossilridgeatx.com" target="_blank">
               <Image src={fossilLogo} className="w-40" alt="Paws on Chicon" />
             </a>
+          </div>
+          <div className="flex flex-col lg:flex-row justify-around gap-12 items-center mt-12">
             <a href="https://backupbakery.com" target="_blank">
               <Image src={backupBakery} className="w-32" alt="Paws on Chicon" />
+            </a>
+            <a href="https://skyhillwellness.com" target="_blank">
+              <Image src={skyHill} className="w-48" alt="Aryel Muse" />
             </a>
             <a href="https://aryelmuseltd.setmore.com" target="_blank">
               <Image src={aryelMuse} className="w-40" alt="Aryel Muse" />
