@@ -15,6 +15,7 @@ import fossilLogo from "../../public/fossil-ridge-logo.png";
 import backupBakery from "../../public/backup-bakery.jpeg";
 import aryelMuse from "../../public/aryel-muse.jpeg";
 import skyHill from "../../public/skyhill.png";
+import bluedotWell from "../../public/bluedotwell.png";
 import { Icons } from "@/components/icons";
 import { CountdownTimer } from "@/components/countdown-timer";
 import { SupportDetail } from "@/components/support-detail";
@@ -277,32 +278,33 @@ export default function Home() {
               <Image
                 src={dancingAustinLogo}
                 className="w-48"
-                alt="Paws on Chicon"
+                alt="Dancin Austin"
               />
             </a>
             <a href="https://southpawsplayschool.com" target="_blank">
               <Image
                 src={southpawsLogo}
                 className="w-40"
-                alt="Paws on Chicon"
+                alt="South Paws PlaySchool"
               />
             </a>
             <a href="https://urbanbetty.com" target="_blank">
-              <Image src={bettyLogo} className="w-40" alt="Paws on Chicon" />
+              <Image src={bettyLogo} className="w-40" alt="Urban Betty" />
             </a>
             <a href="https://www.fossilridgeatx.com" target="_blank">
-              <Image src={fossilLogo} className="w-40" alt="Paws on Chicon" />
+              <Image src={fossilLogo} className="w-40" alt="Fossil Ridge ATX" />
             </a>
-          </div>
-          <div className="flex flex-col lg:flex-row justify-around gap-12 items-center mt-12">
             <a href="https://backupbakery.com" target="_blank">
-              <Image src={backupBakery} className="w-32" alt="Paws on Chicon" />
+              <Image src={backupBakery} className="w-32" alt="Backup Bakery" />
             </a>
             <a href="https://skyhillwellness.com" target="_blank">
-              <Image src={skyHill} className="w-48" alt="Aryel Muse" />
+              <Image src={skyHill} className="w-48" alt="Sky Hill Wellness" />
             </a>
             <a href="https://aryelmuseltd.setmore.com" target="_blank">
               <Image src={aryelMuse} className="w-40" alt="Aryel Muse" />
+            </a>
+            <a href="https://www.bluedotwell.com" target="_blank">
+              <Image src={bluedotWell} className="w-56" alt="Blue Dot Well" />
             </a>
           </div>
         </div>
