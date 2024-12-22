@@ -16,6 +16,7 @@ import backupBakery from "../../public/backup-bakery.jpeg";
 import aryelMuse from "../../public/aryel-muse.jpeg";
 import skyHill from "../../public/skyhill.png";
 import bluedotWell from "../../public/bluedotwell.png";
+import thankYou from "../../public/ACB-thank-you.png";
 import { Icons } from "@/components/icons";
 import { CountdownTimer } from "@/components/countdown-timer";
 import { SupportDetail } from "@/components/support-detail";
@@ -26,6 +27,15 @@ export default function Home() {
 
   return (
     <>
+      <section className="px-default py-12">
+        <div className="mx-auto max-w-screen-xl w-full">
+          <Image
+            className="w-full max-h-[800px] object-contain"
+            src={thankYou}
+            alt="Thank you"
+          />
+        </div>
+      </section>
       <section className="px-default py-9 lg:py-24">
         <div className="mx-auto max-w-screen-xl lg:grid lg:grid-cols-7 lg:gap-5">
           <div className="lg:col-span-5 space-y-4">
